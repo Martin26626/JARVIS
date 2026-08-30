@@ -84,7 +84,7 @@ git clone https://github.com/miguelrobles2002/jarvis
 cd jarvis
 
 # 2. Instala las dependencias
-python pip install -r requirements.txt
+python -m pip install -r requirements.txt
 
 # 3. Instala Ollama (https://ollama.com) y los modelos
 ollama pull qwen3:8b
