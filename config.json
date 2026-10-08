@@ -1,0 +1,26 @@
+{
+  "nombre_usuario": "Martin",
+  "ciudad": "Cordoba Arg",
+  "usar_telegram": false,
+  "telegram_token": "",
+  "telegram_chat_id": "",
+  "modelo_llm": "qwen2.5-coder:7b",
+  "modelo_codigo": "qwen2.5-coder:7b",
+  "usar_voz": true,
+  "usar_imagenes": true,
+  "usar_correo": true,
+  "usar_calendario": true,
+  "usar_futbol": false,
+  "futbol_api_key": "",
+  "football_data_key": "",
+  "usar_backup": true,
+  "backup_carpetas": [
+    "C:\\Users\\marti\\OneDrive\\Desktop\\respaldo de JARVIS"
+  ],
+  "backup_destino": "C:\\Users\\marti\\OneDrive\\Desktop\\respaldo de JARVIS",
+  "usar_minecraft": false,
+  "minecraft_servidor": "",
+  "minecraft_backup": "",
+  "minecraft_run_bat": "",
+  "escritorio": "C:\\Users\\marti\\OneDrive\\Desktop"
+}

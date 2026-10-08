@@ -1,0 +1,501 @@
+[
+  {
+    "fecha": "2026-08-18T21:17:46.167153",
+    "objetivo": "Abre Opera GX",
+    "herramienta": "abrir_app",
+    "argumentos": {
+      "nombre": "Opera GX"
+    },
+    "resultado": "Opened: navegador opera gx",
+    "correcto": true,
+    "error": null
+  },
+  {
+    "fecha": "2026-08-18T22:54:30.104104",
+    "objetivo": "Abre Opera GX",
+    "herramienta": "abrir_app",
+    "argumentos": {
+      "nombre": "Opera GX"
+    },
+    "resultado": "Opened: navegador opera gx",
+    "correcto": true,
+    "error": null
+  },
+  {
+    "fecha": "2026-08-18T22:55:21.460293",
+    "objetivo": "Abre Opera GX",
+    "herramienta": "abrir_app",
+    "argumentos": {
+      "nombre": "Opera GX"
+    },
+    "resultado": "Opened: navegador opera gx",
+    "correcto": true,
+    "error": null
+  },
+  {
+    "fecha": "2026-08-18T23:23:34.567152",
+    "objetivo": "Dime cuanta RAM tengo y que procesador tengo",
+    "herramienta": "informacion_sistema",
+    "argumentos": {},
+    "resultado": "{'computadora': 'PCMARTIN', 'usuario': 'marti', 'windows': 'Windows_NT', 'procesador': 'Intel64 Family 6 Model 60 Stepping 3, GenuineIntel', 'ram_total_gb': 15.87, 'ram_disponible_gb': 2.9, 'cpu_porcentaje': 39.4}",
+    "correcto": true,
+    "error": null
+  },
+  {
+    "fecha": "2026-08-18T23:55:04.077562",
+    "objetivo": "Dime cuanta RAM tengo, que procesador tengo y que GPU tengo",
+    "herramienta": "informacion_sistema",
+    "argumentos": {},
+    "resultado": "{'computadora': 'PCMARTIN', 'usuario': 'marti', 'windows': 'Windows_NT', 'cpu': 'Intel(R) Core(TM) i7-4790S CPU @ 3.20GHz', 'gpus': ['Intel(R) HD Graphics 4600'], 'ram_total_gb': 15.87, 'ram_disponible_gb': 9.02, 'ram_usable_gb': 15.87, 'cpu_porcentaje': 11.7, 'nucleos': 4, 'hilos': 8}",
+    "correcto": true,
+    "error": null
+  },
+  {
+    "fecha": "2026-08-18T23:55:45.473897",
+    "objetivo": "Dime cuanta RAM tengo, que procesador tengo y que GPU tengo",
+    "herramienta": "informacion_sistema",
+    "argumentos": {},
+    "resultado": "{'computadora': 'PCMARTIN', 'usuario': 'marti', 'windows': 'Windows_NT', 'cpu': 'Intel(R) Core(TM) i7-4790S CPU @ 3.20GHz', 'gpus': ['Intel(R) HD Graphics 4600'], 'ram_total_gb': 15.87, 'ram_disponible_gb': 9.02, 'ram_usable_gb': 15.87, 'cpu_porcentaje': 3.1, 'nucleos': 4, 'hilos': 8}",
+    "correcto": true,
+    "error": null
+  },
+  {
+    "fecha": "2026-08-18T23:57:18.996736",
+    "objetivo": "Abre Opera GX",
+    "herramienta": "abrir_app",
+    "argumentos": {
+      "nombre": "Opera GX"
+    },
+    "resultado": "Opened: navegador opera gx",
+    "correcto": true,
+    "error": null
+  },
+  {
+    "fecha": "2026-08-18T23:59:55.900317",
+    "objetivo": "Muestra las ventanas que están abiertas",
+    "herramienta": "listar_ventanas",
+    "argumentos": {},
+    "resultado": "ERROR: module 'control_pc_avanzado' has no attribute 'listar_ventanas'",
+    "correcto": false,
+    "error": "ERROR: module 'control_pc_avanzado' has no attribute 'listar_ventanas'"
+  },
+  {
+    "fecha": "2026-08-19T00:10:41.884775",
+    "objetivo": "Muestra las ventanas que estan abiertas",
+    "herramienta": "listar_ventanas",
+    "argumentos": {},
+    "resultado": "ERROR: module 'control_pc_avanzado' has no attribute 'listar_ventanas'",
+    "correcto": false,
+    "error": "ERROR: module 'control_pc_avanzado' has no attribute 'listar_ventanas'"
+  },
+  {
+    "fecha": "2026-08-19T00:11:07.636802",
+    "objetivo": "Muestra las ventanas que estan abiertas",
+    "herramienta": "listar_ventanas",
+    "argumentos": {},
+    "resultado": "[{'hwnd': 983620, 'titulo': 'Administrador: Windows PowerShell'}, {'hwnd': 328202, 'titulo': 'ChatGPT Classic'}, {'hwnd': 2623536, 'titulo': 'Cortana'}, {'hwnd': 133032, 'titulo': 'Películas y TV'}, {'hwnd': 395328, 'titulo': 'Películas y TV'}, {'hwnd': 264170, 'titulo': 'Configuración'}, {'hwnd': 198574, 'titulo': 'Configuración'}, {'hwnd': 197378, 'titulo': 'Microsoft Text Input Application'}, {'hwnd': 854010, 'titulo': 'Feel Like A Monster | YouTube Music - Opera'}, {'hwnd': 65890, 'titulo': 'Program Manager'}]",
+    "correcto": true,
+    "error": null
+  },
+  {
+    "fecha": "2026-08-19T00:15:36.683820",
+    "objetivo": "Enfoca la ventana de Opera",
+    "herramienta": "enfocar_ventana",
+    "argumentos": {
+      "titulo": "Opera"
+    },
+    "resultado": "Ventana enfocada: TORE UP [Guitar Remix + Extended Intro] - DinoA1 x Don Toliver | YouTube Music - Opera",
+    "correcto": true,
+    "error": null
+  },
+  {
+    "fecha": "2026-08-26T23:02:19.546647",
+    "objetivo": "Muestra mis procesos.",
+    "herramienta": "listar_procesos",
+    "argumentos": {},
+    "resultado": "[{'pid': 16004, 'nombre': 'llama-server.exe', 'ram_mb': 5430.5}, {'pid': 5644, 'nombre': 'MemCompression', 'ram_mb': 813.1}, {'pid': 17692, 'nombre': 'opera.exe', 'ram_mb': 520.2}, {'pid': 7252, 'nombre': 'opera.exe', 'ram_mb': 506.1}, {'pid': 3104, 'nombre': 'MsMpEng.exe', 'ram_mb': 385.5}, {'pid': 19188, 'nombre': 'opera.exe', 'ram_mb': 335.8}, {'pid': 18876, 'nombre': 'opera.exe', 'ram_mb': 297.7}, {'pid': 1752, 'nombre': 'Code.exe', 'ram_mb': 288.9}, {'pid': 20468, 'nombre': 'ChatGPT Classic.exe', 'ram_mb': 269.8}, {'pid': 17164, 'nombre': 'steamwebhelper.exe', 'ram_mb': 262.0}, {'pid': 12216, 'nombre': 'opera.exe', 'ram_mb': 260.9}, {'pid': 12016, 'nombre': 'opera.exe', 'ram_mb': 211.7}, {'pid': 1648, 'nombre': 'opera.exe', 'ram_mb': 210.7}, {'pid': 16720, 'nombre': 'Code.exe', 'ram_mb': 209.0}, {'pid': 19744, 'nombre': 'opera.exe', 'ram_mb': 206.7}, {'pid': 16496, 'nombre': 'WhatsApp.Root.exe', 'ram_mb': 205.7}, {'pid': 3424, 'nombre': 'opera.exe', 'ram_mb': 193.2}, {'pid': 19332, 'nombre': 'opera.exe', 'ram_mb': 193.0}, {'pid': 7504, 'nombre': 'Code.exe', 'ram_mb': 191.5}, {'pid': 16548, 'nombre': 'opera.exe', 'ram_mb': 179.6}, {'pid': 21320, 'nombre': 'RobloxPlayerBeta.exe', 'ram_mb': 179.0}, {'pid': 4432, 'nombre': 'msedge.exe', 'ram_mb': 174.9}, {'pid': 18656, 'nombre': 'opera.exe', 'ram_mb': 174.0}, {'pid': 7084, 'nombre': 'fdm.exe', 'ram_mb': 145.6}, {'pid': 9260, 'nombre': 'msedge.exe', 'ram_mb': 145.2}, {'pid': 1116, 'nombre': 'steamwebhelper.exe', 'ram_mb': 140.6}, {'pid': 13908, 'nombre': 'explorer.exe', 'ram_mb': 137.7}, {'pid': 16876, 'nombre': 'ChatGPT Classic.exe', 'ram_mb': 123.6}, {'pid': 8172, 'nombre': 'Code.exe', 'ram_mb': 107.9}, {'pid': 7996, 'nombre': 'powershell.exe', 'ram_mb': 103.1}, {'pid': 1820, 'nombre': 'Code.exe', 'ram_mb': 101.8}, {'pid': 9136, 'nombre': 'SearchApp.exe', 'ram_mb': 101.0}, {'pid': 1152, 'nombre': 'Code.exe', 'ram_mb': 99.8}, {'pid': 10972, 'nombre': 'Code.exe', 'ram_mb': 95.7}, {'pid': 10028, 'nombre': 'steamwebhelper.exe', 'ram_mb': 92.4}, {'pid': 18740, 'nombre': 'Code.exe', 'ram_mb': 92.3}, {'pid': 7160, 'nombre': 'Code.exe', 'ram_mb': 90.1}, {'pid': 4408, 'nombre': 'EpicGamesLauncher.exe', 'ram_mb': 82.4}, {'pid': 18828, 'nombre': 'steam.exe', 'ram_mb': 81.1}, {'pid': 3056, 'nombre': 'DSAService.exe', 'ram_mb': 75.2}, {'pid': 2984, 'nombre': 'SurSvc.exe', 'ram_mb': 73.4}, {'pid': 6912, 'nombre': 'ChatGPT Classic.exe', 'ram_mb': 70.4}, {'pid': 1376, 'nombre': 'EOSOverlayRenderer-Win64-Shipping.exe', 'ram_mb': 67.9}, {'pid': 124, 'nombre': 'Registry', 'ram_mb': 65.6}, {'pid': 12340, 'nombre': 'dwm.exe', 'ram_mb': 64.8}, {'pid': 16736, 'nombre': 'StartMenuExperienceHost.exe', 'ram_mb': 63.2}, {'pid': 12692, 'nombre': 'opera.exe', 'ram_mb': 59.2}, {'pid': 3700, 'nombre': 'svchost.exe', 'ram_mb': 58.6}, {'pid': 17828, 'nombre': 'TextInputHost.exe', 'ram_mb': 55.3}, {'pid': 2360, 'nombre': 'powershell.exe', 'ram_mb': 54.6}, {'pid': 14848, 'nombre': 'ChatGPT Classic.exe', 'ram_mb': 54.2}, {'pid': 2868, 'nombre': 'svchost.exe', 'ram_mb': 50.5}, {'pid': 10264, 'nombre': 'ShellExperienceHost.exe', 'ram_mb': 50.4}, {'pid': 1828, 'nombre': 'EpicOnlineServicesUserHelper.exe', 'ram_mb': 47.6}, {'pid': 5112, 'nombre': 'Code.exe', 'ram_mb': 47.1}, {'pid': 15328, 'nombre': 'msedgewebview2.exe', 'ram_mb': 45.8}, {'pid': 19344, 'nombre': 'esrv_svc.exe', 'ram_mb': 45.6}, {'pid': 3732, 'nombre': 'svchost.exe', 'ram_mb': 43.2}, {'pid': 5888, 'nombre': 'SearchIndexer.exe', 'ram_mb': 42.7}, {'pid': 5944, 'nombre': 'gamingservices.exe', 'ram_mb': 42.7}, {'pid': 7780, 'nombre': 'RuntimeBroker.exe', 'ram_mb': 42.6}, {'pid': 10628, 'nombre': 'msedge.exe', 'ram_mb': 41.8}, {'pid': 9536, 'nombre': 'TranslucentTB.exe', 'ram_mb': 40.5}, {'pid': 2848, 'nombre': 'svchost.exe', 'ram_mb': 39.2}, {'pid': 3048, 'nombre': 'DSAUpdateService.exe', 'ram_mb': 39.1}, {'pid': 5400, 'nombre': 'ollama.exe', 'ram_mb': 37.8}, {'pid': 3592, 'nombre': 'sihost.exe', 'ram_mb': 36.7}, {'pid': 3192, 'nombre': 'OfficeClickToRun.exe', 'ram_mb': 35.0}, {'pid': 15424, 'nombre': 'RuntimeBroker.exe', 'ram_mb': 35.0}, {'pid': 748, 'nombre': 'steamwebhelper.exe', 'ram_mb': 34.6}, {'pid': 10964, 'nombre': 'opera.exe', 'ram_mb': 34.4}, {'pid': 4804, 'nombre': 'warp-svc.exe', 'ram_mb': 34.2}, {'pid': 16752, 'nombre': 'msedge.exe', 'ram_mb': 33.8}, {'pid': 10456, 'nombre': 'EpicWebHelper.exe', 'ram_mb': 33.5}, {'pid': 976, 'nombre': 'svchost.exe', 'ram_mb': 32.6}, {'pid': 12072, 'nombre': 'opera.exe', 'ram_mb': 32.5}, {'pid': 19800, 'nombre': 'svchost.exe', 'ram_mb': 32.3}, {'pid': 16296, 'nombre': 'python.exe', 'ram_mb': 32.0}, {'pid': 11336, 'nombre': 'Code.exe', 'ram_mb': 31.0}, {'pid': 4844, 'nombre': 'EOSOverlayRenderer-Win64-Shipping.exe', 'ram_mb': 29.8}, {'pid': 17076, 'nombre': 'ApplicationFrameHost.exe', 'ram_mb': 29.5}, {'pid': 9644, 'nombre': 'ChatGPT Classic.exe', 'ram_mb': 29.4}, {'pid': 7396, 'nombre': 'svchost.exe', 'ram_mb': 28.9}, {'pid': 1728, 'nombre': 'ollama app.exe', 'ram_mb': 28.3}, {'pid': 6328, 'nombre': 'EpicWebHelper.exe', 'ram_mb': 28.3}, {'pid': 12284, 'nombre': 'MoUsoCoreWorker.exe', 'ram_mb': 28.2}, {'pid': 88, 'nombre': 'EpicOnlineServicesUserHelper.exe', 'ram_mb': 27.8}, {'pid': 16576, 'nombre': 'steamwebhelper.exe', 'ram_mb': 27.3}, {'pid': 1216, 'nombre': 'svchost.exe', 'ram_mb': 25.9}, {'pid': 10464, 'nombre': 'EOSOverlayRenderer-Win64-Shipping.exe', 'ram_mb': 25.9}, {'pid': 13464, 'nombre': 'RuntimeBroker.exe', 'ram_mb': 25.7}, {'pid': 18212, 'nombre': 'msedge.exe', 'ram_mb': 25.4}, {'pid': 852, 'nombre': 'lsass.exe', 'ram_mb': 25.0}, {'pid': 8412, 'nombre': 'ctfmon.exe', 'ram_mb': 23.7}, {'pid': 10616, 'nombre': 'RuntimeBroker.exe', 'ram_mb': 23.1}, {'pid': 12020, 'nombre': 'BrStMonW.exe', 'ram_mb': 22.7}, {'pid': 9388, 'nombre': 'svchost.exe', 'ram_mb': 22.3}, {'pid': 612, 'nombre': 'svchost.exe', 'ram_mb': 22.2}, {'pid': 17092, 'nombre': 'svchost.exe', 'ram_mb': 22.2}, {'pid': 2404, 'nombre': 'spoolsv.exe', 'ram_mb': 21.7}]",
+    "correcto": true,
+    "error": null
+  },
+  {
+    "fecha": "2026-08-26T23:04:35.661791",
+    "objetivo": "Muestra mis procesos.",
+    "herramienta": "listar_procesos",
+    "argumentos": {},
+    "resultado": "[{'pid': 16004, 'nombre': 'llama-server.exe', 'ram_mb': 5649.0}, {'pid': 5644, 'nombre': 'MemCompression', 'ram_mb': 852.5}, {'pid': 17692, 'nombre': 'opera.exe', 'ram_mb': 519.5}, {'pid': 7252, 'nombre': 'opera.exe', 'ram_mb': 504.3}, {'pid': 3104, 'nombre': 'MsMpEng.exe', 'ram_mb': 382.7}, {'pid': 19188, 'nombre': 'opera.exe', 'ram_mb': 335.7}, {'pid': 18876, 'nombre': 'opera.exe', 'ram_mb': 296.2}, {'pid': 1752, 'nombre': 'Code.exe', 'ram_mb': 291.1}, {'pid': 12216, 'nombre': 'opera.exe', 'ram_mb': 259.8}, {'pid': 17164, 'nombre': 'steamwebhelper.exe', 'ram_mb': 245.8}, {'pid': 20468, 'nombre': 'ChatGPT Classic.exe', 'ram_mb': 239.2}, {'pid': 19744, 'nombre': 'opera.exe', 'ram_mb': 212.6}, {'pid': 12016, 'nombre': 'opera.exe', 'ram_mb': 211.7}, {'pid': 1648, 'nombre': 'opera.exe', 'ram_mb': 210.5}, {'pid': 16496, 'nombre': 'WhatsApp.Root.exe', 'ram_mb': 204.4}, {'pid': 16720, 'nombre': 'Code.exe', 'ram_mb': 200.3}, {'pid': 19332, 'nombre': 'opera.exe', 'ram_mb': 193.0}, {'pid': 7504, 'nombre': 'Code.exe', 'ram_mb': 192.0}, {'pid': 3424, 'nombre': 'opera.exe', 'ram_mb': 183.3}, {'pid': 21320, 'nombre': 'RobloxPlayerBeta.exe', 'ram_mb': 179.4}, {'pid': 16548, 'nombre': 'opera.exe', 'ram_mb': 178.5}, {'pid': 4432, 'nombre': 'msedge.exe', 'ram_mb': 174.7}, {'pid': 18656, 'nombre': 'opera.exe', 'ram_mb': 173.8}, {'pid': 9260, 'nombre': 'msedge.exe', 'ram_mb': 145.2}, {'pid': 1116, 'nombre': 'steamwebhelper.exe', 'ram_mb': 138.8}, {'pid': 13908, 'nombre': 'explorer.exe', 'ram_mb': 134.1}, {'pid': 7084, 'nombre': 'fdm.exe', 'ram_mb': 131.8}, {'pid': 16876, 'nombre': 'ChatGPT Classic.exe', 'ram_mb': 111.7}, {'pid': 8172, 'nombre': 'Code.exe', 'ram_mb': 106.3}, {'pid': 7996, 'nombre': 'powershell.exe', 'ram_mb': 103.1}, {'pid': 1152, 'nombre': 'Code.exe', 'ram_mb': 102.1}, {'pid': 1820, 'nombre': 'Code.exe', 'ram_mb': 102.1}, {'pid': 9136, 'nombre': 'SearchApp.exe', 'ram_mb': 101.1}, {'pid': 10972, 'nombre': 'Code.exe', 'ram_mb': 95.1}, {'pid': 10028, 'nombre': 'steamwebhelper.exe', 'ram_mb': 92.5}, {'pid': 18740, 'nombre': 'Code.exe', 'ram_mb': 92.4}, {'pid': 7160, 'nombre': 'Code.exe', 'ram_mb': 90.6}, {'pid': 4408, 'nombre': 'EpicGamesLauncher.exe', 'ram_mb': 81.5}, {'pid': 18828, 'nombre': 'steam.exe', 'ram_mb': 77.4}, {'pid': 3056, 'nombre': 'DSAService.exe', 'ram_mb': 74.9}, {'pid': 2984, 'nombre': 'SurSvc.exe', 'ram_mb': 73.1}, {'pid': 1376, 'nombre': 'EOSOverlayRenderer-Win64-Shipping.exe', 'ram_mb': 67.3}, {'pid': 124, 'nombre': 'Registry', 'ram_mb': 65.6}, {'pid': 6912, 'nombre': 'ChatGPT Classic.exe', 'ram_mb': 65.1}, {'pid': 16736, 'nombre': 'StartMenuExperienceHost.exe', 'ram_mb': 62.9}, {'pid': 12340, 'nombre': 'dwm.exe', 'ram_mb': 61.4}, {'pid': 3700, 'nombre': 'svchost.exe', 'ram_mb': 58.8}, {'pid': 12692, 'nombre': 'opera.exe', 'ram_mb': 58.5}, {'pid': 17828, 'nombre': 'TextInputHost.exe', 'ram_mb': 55.0}, {'pid': 2360, 'nombre': 'powershell.exe', 'ram_mb': 54.3}, {'pid': 14848, 'nombre': 'ChatGPT Classic.exe', 'ram_mb': 53.5}, {'pid': 10264, 'nombre': 'ShellExperienceHost.exe', 'ram_mb': 50.4}, {'pid': 15328, 'nombre': 'msedgewebview2.exe', 'ram_mb': 47.9}, {'pid': 1828, 'nombre': 'EpicOnlineServicesUserHelper.exe', 'ram_mb': 46.7}, {'pid': 5112, 'nombre': 'Code.exe', 'ram_mb': 46.6}, {'pid': 17396, 'nombre': 'opera.exe', 'ram_mb': 45.0}, {'pid': 19344, 'nombre': 'esrv_svc.exe', 'ram_mb': 44.4}, {'pid': 3732, 'nombre': 'svchost.exe', 'ram_mb': 42.9}, {'pid': 5888, 'nombre': 'SearchIndexer.exe', 'ram_mb': 42.6}, {'pid': 5944, 'nombre': 'gamingservices.exe', 'ram_mb': 42.5}, {'pid': 7780, 'nombre': 'RuntimeBroker.exe', 'ram_mb': 42.5}, {'pid': 10628, 'nombre': 'msedge.exe', 'ram_mb': 41.7}, {'pid': 9536, 'nombre': 'TranslucentTB.exe', 'ram_mb': 40.3}, {'pid': 2868, 'nombre': 'svchost.exe', 'ram_mb': 39.1}, {'pid': 2848, 'nombre': 'svchost.exe', 'ram_mb': 39.0}, {'pid': 3048, 'nombre': 'DSAUpdateService.exe', 'ram_mb': 39.0}, {'pid': 3592, 'nombre': 'sihost.exe', 'ram_mb': 36.6}, {'pid': 15424, 'nombre': 'RuntimeBroker.exe', 'ram_mb': 35.0}, {'pid': 748, 'nombre': 'steamwebhelper.exe', 'ram_mb': 34.5}, {'pid': 10964, 'nombre': 'opera.exe', 'ram_mb': 34.4}, {'pid': 3192, 'nombre': 'OfficeClickToRun.exe', 'ram_mb': 34.1}, {'pid': 16752, 'nombre': 'msedge.exe', 'ram_mb': 33.8}, {'pid': 10456, 'nombre': 'EpicWebHelper.exe', 'ram_mb': 33.5}, {'pid': 4804, 'nombre': 'warp-svc.exe', 'ram_mb': 33.1}, {'pid': 19800, 'nombre': 'svchost.exe', 'ram_mb': 32.5}, {'pid': 976, 'nombre': 'svchost.exe', 'ram_mb': 32.3}, {'pid': 3360, 'nombre': 'python.exe', 'ram_mb': 32.3}, {'pid': 12072, 'nombre': 'opera.exe', 'ram_mb': 32.3}, {'pid': 11336, 'nombre': 'Code.exe', 'ram_mb': 30.9}, {'pid': 12664, 'nombre': 'TiWorker.exe', 'ram_mb': 29.8}, {'pid': 4844, 'nombre': 'EOSOverlayRenderer-Win64-Shipping.exe', 'ram_mb': 29.6}, {'pid': 5400, 'nombre': 'ollama.exe', 'ram_mb': 29.6}, {'pid': 9644, 'nombre': 'ChatGPT Classic.exe', 'ram_mb': 29.3}, {'pid': 7396, 'nombre': 'svchost.exe', 'ram_mb': 28.8}, {'pid': 17076, 'nombre': 'ApplicationFrameHost.exe', 'ram_mb': 28.5}, {'pid': 12284, 'nombre': 'MoUsoCoreWorker.exe', 'ram_mb': 28.1}, {'pid': 6328, 'nombre': 'EpicWebHelper.exe', 'ram_mb': 28.0}, {'pid': 88, 'nombre': 'EpicOnlineServicesUserHelper.exe', 'ram_mb': 27.7}, {'pid': 16576, 'nombre': 'steamwebhelper.exe', 'ram_mb': 26.8}, {'pid': 1728, 'nombre': 'ollama app.exe', 'ram_mb': 26.7}, {'pid': 10464, 'nombre': 'EOSOverlayRenderer-Win64-Shipping.exe', 'ram_mb': 26.0}, {'pid': 13464, 'nombre': 'RuntimeBroker.exe', 'ram_mb': 25.6}, {'pid': 18212, 'nombre': 'msedge.exe', 'ram_mb': 25.4}, {'pid': 1216, 'nombre': 'svchost.exe', 'ram_mb': 25.1}, {'pid': 852, 'nombre': 'lsass.exe', 'ram_mb': 25.0}, {'pid': 8412, 'nombre': 'ctfmon.exe', 'ram_mb': 23.4}, {'pid': 10616, 'nombre': 'RuntimeBroker.exe', 'ram_mb': 23.1}, {'pid': 9388, 'nombre': 'svchost.exe', 'ram_mb': 22.2}, {'pid': 17092, 'nombre': 'svchost.exe', 'ram_mb': 22.1}, {'pid': 612, 'nombre': 'svchost.exe', 'ram_mb': 21.8}]",
+    "correcto": true,
+    "error": null
+  },
+  {
+    "fecha": "2026-08-26T23:14:07.154575",
+    "objetivo": "Muestra mis procesos.",
+    "herramienta": "listar_procesos",
+    "argumentos": {},
+    "resultado": "[{'pid': 8264, 'nombre': 'llama-server.exe', 'ram_mb': 5430.6}, {'pid': 1504, 'nombre': 'opera.exe', 'ram_mb': 646.6}, {'pid': 17692, 'nombre': 'opera.exe', 'ram_mb': 530.8}, {'pid': 7252, 'nombre': 'opera.exe', 'ram_mb': 523.9}, {'pid': 10180, 'nombre': 'opera.exe', 'ram_mb': 423.7}, {'pid': 3104, 'nombre': 'MsMpEng.exe', 'ram_mb': 403.6}, {'pid': 19188, 'nombre': 'opera.exe', 'ram_mb': 342.8}, {'pid': 19744, 'nombre': 'opera.exe', 'ram_mb': 321.7}, {'pid': 18876, 'nombre': 'opera.exe', 'ram_mb': 296.2}, {'pid': 1752, 'nombre': 'Code.exe', 'ram_mb': 294.6}, {'pid': 12216, 'nombre': 'opera.exe', 'ram_mb': 265.2}, {'pid': 19328, 'nombre': 'msedgewebview2.exe', 'ram_mb': 264.2}, {'pid': 17164, 'nombre': 'steamwebhelper.exe', 'ram_mb': 246.4}, {'pid': 20468, 'nombre': 'ChatGPT Classic.exe', 'ram_mb': 241.8}, {'pid': 12016, 'nombre': 'opera.exe', 'ram_mb': 211.6}, {'pid': 1648, 'nombre': 'opera.exe', 'ram_mb': 211.5}, {'pid': 16720, 'nombre': 'Code.exe', 'ram_mb': 208.4}, {'pid': 16496, 'nombre': 'WhatsApp.Root.exe', 'ram_mb': 207.2}, {'pid': 3424, 'nombre': 'opera.exe', 'ram_mb': 203.0}, {'pid': 18656, 'nombre': 'opera.exe', 'ram_mb': 200.3}, {'pid': 19332, 'nombre': 'opera.exe', 'ram_mb': 197.0}, {'pid': 7504, 'nombre': 'Code.exe', 'ram_mb': 191.7}, {'pid': 12380, 'nombre': 'opera.exe', 'ram_mb': 190.5}, {'pid': 16548, 'nombre': 'opera.exe', 'ram_mb': 185.7}, {'pid': 21320, 'nombre': 'RobloxPlayerBeta.exe', 'ram_mb': 179.6}, {'pid': 18120, 'nombre': 'opera.exe', 'ram_mb': 178.6}, {'pid': 4432, 'nombre': 'msedge.exe', 'ram_mb': 166.8}, {'pid': 9260, 'nombre': 'msedge.exe', 'ram_mb': 144.8}, {'pid': 1116, 'nombre': 'steamwebhelper.exe', 'ram_mb': 138.8}, {'pid': 13908, 'nombre': 'explorer.exe', 'ram_mb': 137.0}, {'pid': 7084, 'nombre': 'fdm.exe', 'ram_mb': 132.0}, {'pid': 16876, 'nombre': 'ChatGPT Classic.exe', 'ram_mb': 111.9}, {'pid': 8172, 'nombre': 'Code.exe', 'ram_mb': 107.2}, {'pid': 7996, 'nombre': 'powershell.exe', 'ram_mb': 103.5}, {'pid': 1152, 'nombre': 'Code.exe', 'ram_mb': 102.5}, {'pid': 1820, 'nombre': 'Code.exe', 'ram_mb': 101.7}, {'pid': 9136, 'nombre': 'SearchApp.exe', 'ram_mb': 101.3}, {'pid': 10972, 'nombre': 'Code.exe', 'ram_mb': 95.9}, {'pid': 10028, 'nombre': 'steamwebhelper.exe', 'ram_mb': 93.6}, {'pid': 18740, 'nombre': 'Code.exe', 'ram_mb': 91.9}, {'pid': 7160, 'nombre': 'Code.exe', 'ram_mb': 90.7}, {'pid': 4408, 'nombre': 'EpicGamesLauncher.exe', 'ram_mb': 81.5}, {'pid': 3056, 'nombre': 'DSAService.exe', 'ram_mb': 74.3}, {'pid': 18828, 'nombre': 'steam.exe', 'ram_mb': 74.2}, {'pid': 12340, 'nombre': 'dwm.exe', 'ram_mb': 72.1}, {'pid': 2984, 'nombre': 'SurSvc.exe', 'ram_mb': 67.6}, {'pid': 1376, 'nombre': 'EOSOverlayRenderer-Win64-Shipping.exe', 'ram_mb': 67.3}, {'pid': 124, 'nombre': 'Registry', 'ram_mb': 65.5}, {'pid': 6912, 'nombre': 'ChatGPT Classic.exe', 'ram_mb': 65.2}, {'pid': 16736, 'nombre': 'StartMenuExperienceHost.exe', 'ram_mb': 64.0}, {'pid': 12692, 'nombre': 'opera.exe', 'ram_mb': 60.9}, {'pid': 3700, 'nombre': 'svchost.exe', 'ram_mb': 59.2}, {'pid': 15328, 'nombre': 'msedgewebview2.exe', 'ram_mb': 57.6}, {'pid': 17828, 'nombre': 'TextInputHost.exe', 'ram_mb': 55.0}, {'pid': 2360, 'nombre': 'powershell.exe', 'ram_mb': 54.4}, {'pid': 14848, 'nombre': 'ChatGPT Classic.exe', 'ram_mb': 53.5}, {'pid': 10264, 'nombre': 'ShellExperienceHost.exe', 'ram_mb': 50.8}, {'pid': 15616, 'nombre': 'opera.exe', 'ram_mb': 48.8}, {'pid': 7272, 'nombre': 'opera.exe', 'ram_mb': 47.4}, {'pid': 1828, 'nombre': 'EpicOnlineServicesUserHelper.exe', 'ram_mb': 46.7}, {'pid': 5112, 'nombre': 'Code.exe', 'ram_mb': 46.6}, {'pid': 16004, 'nombre': 'opera.exe', 'ram_mb': 45.3}, {'pid': 19344, 'nombre': 'esrv_svc.exe', 'ram_mb': 45.1}, {'pid': 7780, 'nombre': 'RuntimeBroker.exe', 'ram_mb': 44.3}, {'pid': 5888, 'nombre': 'SearchIndexer.exe', 'ram_mb': 43.8}, {'pid': 3732, 'nombre': 'svchost.exe', 'ram_mb': 42.8}, {'pid': 5944, 'nombre': 'gamingservices.exe', 'ram_mb': 42.4}, {'pid': 10628, 'nombre': 'msedge.exe', 'ram_mb': 42.0}, {'pid': 2868, 'nombre': 'svchost.exe', 'ram_mb': 41.5}, {'pid': 11580, 'nombre': 'opera.exe', 'ram_mb': 41.4}, {'pid': 9536, 'nombre': 'TranslucentTB.exe', 'ram_mb': 40.3}, {'pid': 5400, 'nombre': 'ollama.exe', 'ram_mb': 39.5}, {'pid': 3048, 'nombre': 'DSAUpdateService.exe', 'ram_mb': 39.0}, {'pid': 2848, 'nombre': 'svchost.exe', 'ram_mb': 38.4}, {'pid': 3592, 'nombre': 'sihost.exe', 'ram_mb': 36.6}, {'pid': 15424, 'nombre': 'RuntimeBroker.exe', 'ram_mb': 35.0}, {'pid': 748, 'nombre': 'steamwebhelper.exe', 'ram_mb': 34.5}, {'pid': 16752, 'nombre': 'msedge.exe', 'ram_mb': 34.5}, {'pid': 20664, 'nombre': 'opera.exe', 'ram_mb': 34.4}, {'pid': 3192, 'nombre': 'OfficeClickToRun.exe', 'ram_mb': 34.0}, {'pid': 10456, 'nombre': 'EpicWebHelper.exe', 'ram_mb': 33.5}, {'pid': 4804, 'nombre': 'warp-svc.exe', 'ram_mb': 33.2}, {'pid': 19800, 'nombre': 'svchost.exe', 'ram_mb': 32.7}, {'pid': 7600, 'nombre': 'python.exe', 'ram_mb': 32.5}, {'pid': 976, 'nombre': 'svchost.exe', 'ram_mb': 32.4}, {'pid': 12072, 'nombre': 'opera.exe', 'ram_mb': 32.3}, {'pid': 11336, 'nombre': 'Code.exe', 'ram_mb': 30.9}, {'pid': 4844, 'nombre': 'EOSOverlayRenderer-Win64-Shipping.exe', 'ram_mb': 29.6}, {'pid': 9644, 'nombre': 'ChatGPT Classic.exe', 'ram_mb': 29.3}, {'pid': 7396, 'nombre': 'svchost.exe', 'ram_mb': 28.8}, {'pid': 17076, 'nombre': 'ApplicationFrameHost.exe', 'ram_mb': 28.5}, {'pid': 6328, 'nombre': 'EpicWebHelper.exe', 'ram_mb': 28.0}, {'pid': 12284, 'nombre': 'MoUsoCoreWorker.exe', 'ram_mb': 28.0}, {'pid': 88, 'nombre': 'EpicOnlineServicesUserHelper.exe', 'ram_mb': 27.7}, {'pid': 13464, 'nombre': 'RuntimeBroker.exe', 'ram_mb': 27.7}, {'pid': 16576, 'nombre': 'steamwebhelper.exe', 'ram_mb': 26.9}, {'pid': 1728, 'nombre': 'ollama app.exe', 'ram_mb': 26.6}, {'pid': 10464, 'nombre': 'EOSOverlayRenderer-Win64-Shipping.exe', 'ram_mb': 25.9}, {'pid': 18212, 'nombre': 'msedge.exe', 'ram_mb': 25.8}, {'pid': 1216, 'nombre': 'svchost.exe', 'ram_mb': 25.4}]",
+    "correcto": true,
+    "error": null
+  },
+  {
+    "fecha": "2026-08-26T23:29:04.548018",
+    "objetivo": "Muestra mis procesos.",
+    "herramienta": "listar_procesos",
+    "argumentos": {},
+    "resultado": "[{'pid': 13852, 'nombre': 'llama-server.exe', 'ram_mb': 5431.0}, {'pid': 17692, 'nombre': 'opera.exe', 'ram_mb': 536.7}, {'pid': 7252, 'nombre': 'opera.exe', 'ram_mb': 521.3}, {'pid': 10180, 'nombre': 'opera.exe', 'ram_mb': 406.9}, {'pid': 3104, 'nombre': 'MsMpEng.exe', 'ram_mb': 401.4}, {'pid': 19188, 'nombre': 'opera.exe', 'ram_mb': 342.5}, {'pid': 18876, 'nombre': 'opera.exe', 'ram_mb': 296.2}, {'pid': 1752, 'nombre': 'Code.exe', 'ram_mb': 294.3}, {'pid': 12216, 'nombre': 'opera.exe', 'ram_mb': 270.3}, {'pid': 19328, 'nombre': 'msedgewebview2.exe', 'ram_mb': 265.7}, {'pid': 9136, 'nombre': 'SearchApp.exe', 'ram_mb': 261.9}, {'pid': 17164, 'nombre': 'steamwebhelper.exe', 'ram_mb': 247.4}, {'pid': 20468, 'nombre': 'ChatGPT Classic.exe', 'ram_mb': 238.0}, {'pid': 19744, 'nombre': 'opera.exe', 'ram_mb': 218.5}, {'pid': 3424, 'nombre': 'opera.exe', 'ram_mb': 217.9}, {'pid': 16720, 'nombre': 'Code.exe', 'ram_mb': 215.1}, {'pid': 1648, 'nombre': 'opera.exe', 'ram_mb': 211.7}, {'pid': 12016, 'nombre': 'opera.exe', 'ram_mb': 211.6}, {'pid': 16496, 'nombre': 'WhatsApp.Root.exe', 'ram_mb': 205.6}, {'pid': 19332, 'nombre': 'opera.exe', 'ram_mb': 195.6}, {'pid': 16548, 'nombre': 'opera.exe', 'ram_mb': 193.1}, {'pid': 7504, 'nombre': 'Code.exe', 'ram_mb': 192.0}, {'pid': 18656, 'nombre': 'opera.exe', 'ram_mb': 189.9}, {'pid': 21320, 'nombre': 'RobloxPlayerBeta.exe', 'ram_mb': 179.3}, {'pid': 4432, 'nombre': 'msedge.exe', 'ram_mb': 167.0}, {'pid': 9260, 'nombre': 'msedge.exe', 'ram_mb': 144.8}, {'pid': 1116, 'nombre': 'steamwebhelper.exe', 'ram_mb': 138.9}, {'pid': 13908, 'nombre': 'explorer.exe', 'ram_mb': 136.0}, {'pid': 7084, 'nombre': 'fdm.exe', 'ram_mb': 132.1}, {'pid': 16876, 'nombre': 'ChatGPT Classic.exe', 'ram_mb': 111.7}, {'pid': 8172, 'nombre': 'Code.exe', 'ram_mb': 108.9}, {'pid': 7996, 'nombre': 'powershell.exe', 'ram_mb': 104.6}, {'pid': 1820, 'nombre': 'Code.exe', 'ram_mb': 103.1}, {'pid': 1152, 'nombre': 'Code.exe', 'ram_mb': 102.9}, {'pid': 10028, 'nombre': 'steamwebhelper.exe', 'ram_mb': 95.2}, {'pid': 10972, 'nombre': 'Code.exe', 'ram_mb': 94.9}, {'pid': 18740, 'nombre': 'Code.exe', 'ram_mb': 92.0}, {'pid': 7160, 'nombre': 'Code.exe', 'ram_mb': 90.7}, {'pid': 4408, 'nombre': 'EpicGamesLauncher.exe', 'ram_mb': 81.6}, {'pid': 12340, 'nombre': 'dwm.exe', 'ram_mb': 79.8}, {'pid': 16736, 'nombre': 'StartMenuExperienceHost.exe', 'ram_mb': 77.1}, {'pid': 3056, 'nombre': 'DSAService.exe', 'ram_mb': 76.2}, {'pid': 18828, 'nombre': 'steam.exe', 'ram_mb': 74.1}, {'pid': 15328, 'nombre': 'msedgewebview2.exe', 'ram_mb': 69.4}, {'pid': 1376, 'nombre': 'EOSOverlayRenderer-Win64-Shipping.exe', 'ram_mb': 67.3}, {'pid': 2984, 'nombre': 'SurSvc.exe', 'ram_mb': 65.6}, {'pid': 124, 'nombre': 'Registry', 'ram_mb': 65.5}, {'pid': 6912, 'nombre': 'ChatGPT Classic.exe', 'ram_mb': 65.2}, {'pid': 17828, 'nombre': 'TextInputHost.exe', 'ram_mb': 64.8}, {'pid': 12692, 'nombre': 'opera.exe', 'ram_mb': 60.1}, {'pid': 3700, 'nombre': 'svchost.exe', 'ram_mb': 59.3}, {'pid': 7780, 'nombre': 'RuntimeBroker.exe', 'ram_mb': 57.5}, {'pid': 2360, 'nombre': 'powershell.exe', 'ram_mb': 54.7}, {'pid': 14848, 'nombre': 'ChatGPT Classic.exe', 'ram_mb': 53.6}, {'pid': 10264, 'nombre': 'ShellExperienceHost.exe', 'ram_mb': 50.7}, {'pid': 5888, 'nombre': 'SearchIndexer.exe', 'ram_mb': 46.8}, {'pid': 1828, 'nombre': 'EpicOnlineServicesUserHelper.exe', 'ram_mb': 46.7}, {'pid': 5112, 'nombre': 'Code.exe', 'ram_mb': 46.6}, {'pid': 19344, 'nombre': 'esrv_svc.exe', 'ram_mb': 45.6}, {'pid': 2868, 'nombre': 'svchost.exe', 'ram_mb': 45.1}, {'pid': 5944, 'nombre': 'gamingservices.exe', 'ram_mb': 42.4}, {'pid': 10628, 'nombre': 'msedge.exe', 'ram_mb': 42.0}, {'pid': 3732, 'nombre': 'svchost.exe', 'ram_mb': 41.6}, {'pid': 9536, 'nombre': 'TranslucentTB.exe', 'ram_mb': 40.4}, {'pid': 5400, 'nombre': 'ollama.exe', 'ram_mb': 40.2}, {'pid': 3048, 'nombre': 'DSAUpdateService.exe', 'ram_mb': 39.0}, {'pid': 2848, 'nombre': 'svchost.exe', 'ram_mb': 38.4}, {'pid': 15424, 'nombre': 'RuntimeBroker.exe', 'ram_mb': 36.7}, {'pid': 10648, 'nombre': 'opera.exe', 'ram_mb': 36.2}, {'pid': 3592, 'nombre': 'sihost.exe', 'ram_mb': 35.2}, {'pid': 748, 'nombre': 'steamwebhelper.exe', 'ram_mb': 34.5}, {'pid': 16752, 'nombre': 'msedge.exe', 'ram_mb': 34.5}, {'pid': 4804, 'nombre': 'warp-svc.exe', 'ram_mb': 33.5}, {'pid': 10456, 'nombre': 'EpicWebHelper.exe', 'ram_mb': 33.5}, {'pid': 3192, 'nombre': 'OfficeClickToRun.exe', 'ram_mb': 33.3}, {'pid': 19800, 'nombre': 'svchost.exe', 'ram_mb': 32.6}, {'pid': 976, 'nombre': 'svchost.exe', 'ram_mb': 32.5}, {'pid': 9032, 'nombre': 'python.exe', 'ram_mb': 32.4}, {'pid': 12072, 'nombre': 'opera.exe', 'ram_mb': 32.3}, {'pid': 11336, 'nombre': 'Code.exe', 'ram_mb': 30.9}, {'pid': 4844, 'nombre': 'EOSOverlayRenderer-Win64-Shipping.exe', 'ram_mb': 29.6}, {'pid': 9644, 'nombre': 'ChatGPT Classic.exe', 'ram_mb': 29.3}, {'pid': 7396, 'nombre': 'svchost.exe', 'ram_mb': 28.8}, {'pid': 17076, 'nombre': 'ApplicationFrameHost.exe', 'ram_mb': 28.5}, {'pid': 6328, 'nombre': 'EpicWebHelper.exe', 'ram_mb': 28.0}, {'pid': 88, 'nombre': 'EpicOnlineServicesUserHelper.exe', 'ram_mb': 27.7}, {'pid': 3376, 'nombre': 'dllhost.exe', 'ram_mb': 27.7}, {'pid': 12284, 'nombre': 'MoUsoCoreWorker.exe', 'ram_mb': 27.6}, {'pid': 13464, 'nombre': 'RuntimeBroker.exe', 'ram_mb': 27.4}, {'pid': 16576, 'nombre': 'steamwebhelper.exe', 'ram_mb': 26.9}, {'pid': 1728, 'nombre': 'ollama app.exe', 'ram_mb': 26.6}, {'pid': 5644, 'nombre': 'MemCompression', 'ram_mb': 26.1}, {'pid': 10464, 'nombre': 'EOSOverlayRenderer-Win64-Shipping.exe', 'ram_mb': 25.9}, {'pid': 1216, 'nombre': 'svchost.exe', 'ram_mb': 25.8}, {'pid': 18212, 'nombre': 'msedge.exe', 'ram_mb': 25.8}, {'pid': 852, 'nombre': 'lsass.exe', 'ram_mb': 25.0}, {'pid': 8412, 'nombre': 'ctfmon.exe', 'ram_mb': 23.8}, {'pid': 10616, 'nombre': 'RuntimeBroker.exe', 'ram_mb': 22.8}, {'pid': 9388, 'nombre': 'svchost.exe', 'ram_mb': 22.4}, {'pid': 17092, 'nombre': 'svchost.exe', 'ram_mb': 22.1}]",
+    "correcto": true,
+    "error": null
+  },
+  {
+    "fecha": "2026-08-26T23:30:01.109860",
+    "objetivo": "Muestra mis procesos.",
+    "herramienta": "listar_procesos",
+    "argumentos": {},
+    "resultado": "[{'pid': 13852, 'nombre': 'llama-server.exe', 'ram_mb': 5431.7}, {'pid': 7252, 'nombre': 'opera.exe', 'ram_mb': 519.9}, {'pid': 17692, 'nombre': 'opera.exe', 'ram_mb': 513.2}, {'pid': 10180, 'nombre': 'opera.exe', 'ram_mb': 397.4}, {'pid': 3104, 'nombre': 'MsMpEng.exe', 'ram_mb': 385.1}, {'pid': 19188, 'nombre': 'opera.exe', 'ram_mb': 342.4}, {'pid': 1752, 'nombre': 'Code.exe', 'ram_mb': 295.7}, {'pid': 18876, 'nombre': 'opera.exe', 'ram_mb': 292.3}, {'pid': 19328, 'nombre': 'msedgewebview2.exe', 'ram_mb': 265.7}, {'pid': 19744, 'nombre': 'opera.exe', 'ram_mb': 260.2}, {'pid': 12216, 'nombre': 'opera.exe', 'ram_mb': 251.6}, {'pid': 17164, 'nombre': 'steamwebhelper.exe', 'ram_mb': 235.0}, {'pid': 20468, 'nombre': 'ChatGPT Classic.exe', 'ram_mb': 232.7}, {'pid': 3424, 'nombre': 'opera.exe', 'ram_mb': 217.7}, {'pid': 12016, 'nombre': 'opera.exe', 'ram_mb': 198.9}, {'pid': 16496, 'nombre': 'WhatsApp.Root.exe', 'ram_mb': 197.6}, {'pid': 1648, 'nombre': 'opera.exe', 'ram_mb': 195.8}, {'pid': 19332, 'nombre': 'opera.exe', 'ram_mb': 195.4}, {'pid': 16720, 'nombre': 'Code.exe', 'ram_mb': 192.8}, {'pid': 7504, 'nombre': 'Code.exe', 'ram_mb': 192.1}, {'pid': 16548, 'nombre': 'opera.exe', 'ram_mb': 191.3}, {'pid': 18656, 'nombre': 'opera.exe', 'ram_mb': 189.9}, {'pid': 21320, 'nombre': 'RobloxPlayerBeta.exe', 'ram_mb': 178.9}, {'pid': 5644, 'nombre': 'MemCompression', 'ram_mb': 142.2}, {'pid': 1116, 'nombre': 'steamwebhelper.exe', 'ram_mb': 138.1}, {'pid': 13908, 'nombre': 'explorer.exe', 'ram_mb': 133.4}, {'pid': 4432, 'nombre': 'msedge.exe', 'ram_mb': 125.1}, {'pid': 16876, 'nombre': 'ChatGPT Classic.exe', 'ram_mb': 111.0}, {'pid': 9136, 'nombre': 'SearchApp.exe', 'ram_mb': 102.4}, {'pid': 8172, 'nombre': 'Code.exe', 'ram_mb': 102.0}, {'pid': 1820, 'nombre': 'Code.exe', 'ram_mb': 101.6}, {'pid': 10972, 'nombre': 'Code.exe', 'ram_mb': 94.9}, {'pid': 10028, 'nombre': 'steamwebhelper.exe', 'ram_mb': 93.5}, {'pid': 18740, 'nombre': 'Code.exe', 'ram_mb': 91.9}, {'pid': 7996, 'nombre': 'powershell.exe', 'ram_mb': 91.4}, {'pid': 7160, 'nombre': 'Code.exe', 'ram_mb': 90.7}, {'pid': 1152, 'nombre': 'Code.exe', 'ram_mb': 84.7}, {'pid': 4408, 'nombre': 'EpicGamesLauncher.exe', 'ram_mb': 81.1}, {'pid': 7084, 'nombre': 'fdm.exe', 'ram_mb': 79.4}, {'pid': 12340, 'nombre': 'dwm.exe', 'ram_mb': 77.7}, {'pid': 16736, 'nombre': 'StartMenuExperienceHost.exe', 'ram_mb': 75.8}, {'pid': 9260, 'nombre': 'msedge.exe', 'ram_mb': 74.6}, {'pid': 3056, 'nombre': 'DSAService.exe', 'ram_mb': 72.0}, {'pid': 18828, 'nombre': 'steam.exe', 'ram_mb': 71.9}, {'pid': 15328, 'nombre': 'msedgewebview2.exe', 'ram_mb': 69.4}, {'pid': 1376, 'nombre': 'EOSOverlayRenderer-Win64-Shipping.exe', 'ram_mb': 66.5}, {'pid': 124, 'nombre': 'Registry', 'ram_mb': 65.6}, {'pid': 2984, 'nombre': 'SurSvc.exe', 'ram_mb': 65.5}, {'pid': 6912, 'nombre': 'ChatGPT Classic.exe', 'ram_mb': 65.1}, {'pid': 17828, 'nombre': 'TextInputHost.exe', 'ram_mb': 64.7}, {'pid': 12692, 'nombre': 'opera.exe', 'ram_mb': 60.1}, {'pid': 3700, 'nombre': 'svchost.exe', 'ram_mb': 59.3}, {'pid': 2360, 'nombre': 'powershell.exe', 'ram_mb': 54.3}, {'pid': 7780, 'nombre': 'RuntimeBroker.exe', 'ram_mb': 54.2}, {'pid': 14848, 'nombre': 'ChatGPT Classic.exe', 'ram_mb': 53.5}, {'pid': 10264, 'nombre': 'ShellExperienceHost.exe', 'ram_mb': 50.7}, {'pid': 5112, 'nombre': 'Code.exe', 'ram_mb': 46.5}, {'pid': 5888, 'nombre': 'SearchIndexer.exe', 'ram_mb': 46.2}, {'pid': 1828, 'nombre': 'EpicOnlineServicesUserHelper.exe', 'ram_mb': 45.4}, {'pid': 19344, 'nombre': 'esrv_svc.exe', 'ram_mb': 43.7}, {'pid': 3732, 'nombre': 'svchost.exe', 'ram_mb': 41.4}, {'pid': 5944, 'nombre': 'gamingservices.exe', 'ram_mb': 40.7}, {'pid': 9536, 'nombre': 'TranslucentTB.exe', 'ram_mb': 40.1}, {'pid': 10628, 'nombre': 'msedge.exe', 'ram_mb': 37.7}, {'pid': 3048, 'nombre': 'DSAUpdateService.exe', 'ram_mb': 37.0}, {'pid': 10648, 'nombre': 'opera.exe', 'ram_mb': 36.2}, {'pid': 2848, 'nombre': 'svchost.exe', 'ram_mb': 36.1}, {'pid': 15424, 'nombre': 'RuntimeBroker.exe', 'ram_mb': 35.7}, {'pid': 3592, 'nombre': 'sihost.exe', 'ram_mb': 35.2}, {'pid': 748, 'nombre': 'steamwebhelper.exe', 'ram_mb': 34.4}, {'pid': 10456, 'nombre': 'EpicWebHelper.exe', 'ram_mb': 33.5}, {'pid': 3192, 'nombre': 'OfficeClickToRun.exe', 'ram_mb': 32.9}, {'pid': 18016, 'nombre': 'python.exe', 'ram_mb': 32.6}, {'pid': 19800, 'nombre': 'svchost.exe', 'ram_mb': 32.5}, {'pid': 4804, 'nombre': 'warp-svc.exe', 'ram_mb': 32.3}, {'pid': 12072, 'nombre': 'opera.exe', 'ram_mb': 32.2}, {'pid': 976, 'nombre': 'svchost.exe', 'ram_mb': 32.1}, {'pid': 5400, 'nombre': 'ollama.exe', 'ram_mb': 31.8}, {'pid': 11336, 'nombre': 'Code.exe', 'ram_mb': 30.9}, {'pid': 4844, 'nombre': 'EOSOverlayRenderer-Win64-Shipping.exe', 'ram_mb': 29.4}, {'pid': 9644, 'nombre': 'ChatGPT Classic.exe', 'ram_mb': 29.3}, {'pid': 2868, 'nombre': 'svchost.exe', 'ram_mb': 29.1}, {'pid': 7396, 'nombre': 'svchost.exe', 'ram_mb': 28.7}, {'pid': 17076, 'nombre': 'ApplicationFrameHost.exe', 'ram_mb': 28.5}, {'pid': 6328, 'nombre': 'EpicWebHelper.exe', 'ram_mb': 27.9}, {'pid': 88, 'nombre': 'EpicOnlineServicesUserHelper.exe', 'ram_mb': 27.7}, {'pid': 3376, 'nombre': 'dllhost.exe', 'ram_mb': 27.7}, {'pid': 13464, 'nombre': 'RuntimeBroker.exe', 'ram_mb': 27.4}, {'pid': 16576, 'nombre': 'steamwebhelper.exe', 'ram_mb': 26.9}, {'pid': 1728, 'nombre': 'ollama app.exe', 'ram_mb': 26.1}, {'pid': 10464, 'nombre': 'EOSOverlayRenderer-Win64-Shipping.exe', 'ram_mb': 25.8}, {'pid': 16752, 'nombre': 'msedge.exe', 'ram_mb': 25.5}, {'pid': 852, 'nombre': 'lsass.exe', 'ram_mb': 24.6}, {'pid': 1216, 'nombre': 'svchost.exe', 'ram_mb': 24.1}, {'pid': 8412, 'nombre': 'ctfmon.exe', 'ram_mb': 23.7}, {'pid': 12284, 'nombre': 'MoUsoCoreWorker.exe', 'ram_mb': 23.1}, {'pid': 10616, 'nombre': 'RuntimeBroker.exe', 'ram_mb': 22.7}, {'pid': 18212, 'nombre': 'msedge.exe', 'ram_mb': 22.7}, {'pid': 9388, 'nombre': 'svchost.exe', 'ram_mb': 22.0}, {'pid': 8324, 'nombre': 'opera.exe', 'ram_mb': 21.5}]",
+    "correcto": true,
+    "error": null
+  },
+  {
+    "fecha": "2026-08-27T21:40:03.072734",
+    "objetivo": "Abre una aplicacion que no existe llamada APLICACION_DE_PRUEBA_JARVIS_12345",
+    "herramienta": "buscar_app",
+    "argumentos": {
+      "nombre": "APLICACION_DE_PRUEBA_JARVIS_12345"
+    },
+    "resultado": "None",
+    "correcto": true,
+    "error": null
+  },
+  {
+    "fecha": "2026-08-27T21:47:07.439478",
+    "objetivo": "Abre una aplicacion que no existe llamada APLICACION_DE_PRUEBA_JARVIS_12345",
+    "herramienta": "buscar_app",
+    "argumentos": {
+      "nombre": "APLICACION_DE_PRUEBA_JARVIS_12345"
+    },
+    "resultado": "None",
+    "correcto": false,
+    "error": "None"
+  },
+  {
+    "fecha": "2026-08-27T21:53:28.616003",
+    "objetivo": "Abre una aplicacion que no existe llamada APLICACION_DE_PRUEBA_JARVIS_12345",
+    "herramienta": "buscar_app",
+    "argumentos": {
+      "nombre": "APLICACION_DE_PRUEBA_JARVIS_12345"
+    },
+    "resultado": "None",
+    "correcto": false,
+    "error": "None"
+  },
+  {
+    "fecha": "2026-09-02T17:55:42.264189",
+    "objetivo": "abre una aplicacion que claramente no existe llamada JARVIS_APP_PRUEBA_999",
+    "herramienta": "informacion_sistema",
+    "argumentos": {},
+    "resultado": "{'computadora': 'PCMARTIN', 'usuario': 'marti', 'windows': 'Windows_NT', 'cpu': 'Intel(R) Core(TM) i7-4790S CPU @ 3.20GHz', 'gpus': ['Intel(R) HD Graphics 4600'], 'ram_total_gb': 15.87, 'ram_disponible_gb': 4.72, 'ram_usable_gb': 15.87, 'cpu_porcentaje': 8.8, 'nucleos': 4, 'hilos': 8}",
+    "correcto": true,
+    "error": null
+  },
+  {
+    "fecha": "2026-09-02T17:59:21.371132",
+    "objetivo": "abre una aplicacion que claramente no existe llamada JARVIS_APP_PRUEBA_999",
+    "herramienta": "informacion_sistema",
+    "argumentos": {},
+    "resultado": "{'computadora': 'PCMARTIN', 'usuario': 'marti', 'windows': 'Windows_NT', 'cpu': 'Intel(R) Core(TM) i7-4790S CPU @ 3.20GHz', 'gpus': ['Intel(R) HD Graphics 4600'], 'ram_total_gb': 15.87, 'ram_disponible_gb': 4.94, 'ram_usable_gb': 15.87, 'cpu_porcentaje': 9.8, 'nucleos': 4, 'hilos': 8}",
+    "correcto": true,
+    "error": null
+  },
+  {
+    "fecha": "2026-09-02T18:05:34.189039",
+    "objetivo": "abre una aplicacion que claramente no existe llamada JARVIS_APP_PRUEBA_999",
+    "herramienta": "informacion_sistema",
+    "argumentos": {},
+    "resultado": "{'computadora': 'PCMARTIN', 'usuario': 'marti', 'windows': 'Windows_NT', 'cpu': 'Intel(R) Core(TM) i7-4790S CPU @ 3.20GHz', 'gpus': ['Intel(R) HD Graphics 4600'], 'ram_total_gb': 15.87, 'ram_disponible_gb': 4.72, 'ram_usable_gb': 15.87, 'cpu_porcentaje': 16.4, 'nucleos': 4, 'hilos': 8}",
+    "correcto": true,
+    "error": null
+  },
+  {
+    "fecha": "2026-09-02T18:07:09.856100",
+    "objetivo": "PRUEBA",
+    "herramienta": "informacion_sistema",
+    "argumentos": {},
+    "resultado": "{'computadora': 'PCMARTIN', 'usuario': 'marti', 'windows': 'Windows_NT', 'cpu': 'Intel(R) Core(TM) i7-4790S CPU @ 3.20GHz', 'gpus': ['Intel(R) HD Graphics 4600'], 'ram_total_gb': 15.87, 'ram_disponible_gb': 4.91, 'ram_usable_gb': 15.87, 'cpu_porcentaje': 1.2, 'nucleos': 4, 'hilos': 8}",
+    "correcto": true,
+    "error": null
+  },
+  {
+    "fecha": "2026-09-02T18:10:48.694557",
+    "objetivo": "abre una aplicacion que claramente no existe llamada JARVIS_APP_PRUEBA_999",
+    "herramienta": "informacion_sistema",
+    "argumentos": {},
+    "resultado": "{'computadora': 'PCMARTIN', 'usuario': 'marti', 'windows': 'Windows_NT', 'cpu': 'Intel(R) Core(TM) i7-4790S CPU @ 3.20GHz', 'gpus': ['Intel(R) HD Graphics 4600'], 'ram_total_gb': 15.87, 'ram_disponible_gb': 5.17, 'ram_usable_gb': 15.87, 'cpu_porcentaje': 13.7, 'nucleos': 4, 'hilos': 8}",
+    "correcto": true,
+    "error": null
+  },
+  {
+    "fecha": "2026-09-11T21:23:04.322860",
+    "objetivo": "muestra la ram",
+    "herramienta": "informacion_sistema",
+    "argumentos": {},
+    "resultado": "{'computadora': 'PCMARTIN', 'usuario': 'marti', 'windows': 'Windows_NT', 'cpu': 'Intel(R) Core(TM) i7-4790S CPU @ 3.20GHz', 'gpus': ['Intel(R) HD Graphics 4600'], 'ram_total_gb': 15.87, 'ram_disponible_gb': 7.79, 'ram_usable_gb': 15.87, 'cpu_porcentaje': 12.1, 'nucleos': 4, 'hilos': 8}",
+    "correcto": true,
+    "error": null
+  },
+  {
+    "fecha": "2026-09-11T21:23:06.604030",
+    "objetivo": "cuanta ram tengo",
+    "herramienta": "informacion_sistema",
+    "argumentos": {},
+    "resultado": "{'computadora': 'PCMARTIN', 'usuario': 'marti', 'windows': 'Windows_NT', 'cpu': 'Intel(R) Core(TM) i7-4790S CPU @ 3.20GHz', 'gpus': ['Intel(R) HD Graphics 4600'], 'ram_total_gb': 15.87, 'ram_disponible_gb': 7.84, 'ram_usable_gb': 15.87, 'cpu_porcentaje': 2.7, 'nucleos': 4, 'hilos': 8}",
+    "correcto": true,
+    "error": null
+  },
+  {
+    "fecha": "2026-09-11T21:23:08.930811",
+    "objetivo": "informacion de mi pc",
+    "herramienta": "informacion_sistema",
+    "argumentos": {},
+    "resultado": "{'computadora': 'PCMARTIN', 'usuario': 'marti', 'windows': 'Windows_NT', 'cpu': 'Intel(R) Core(TM) i7-4790S CPU @ 3.20GHz', 'gpus': ['Intel(R) HD Graphics 4600'], 'ram_total_gb': 15.87, 'ram_disponible_gb': 7.87, 'ram_usable_gb': 15.87, 'cpu_porcentaje': 2.3, 'nucleos': 4, 'hilos': 8}",
+    "correcto": true,
+    "error": null
+  },
+  {
+    "fecha": "2026-09-11T21:23:11.189990",
+    "objetivo": "abre una aplicacion que claramente no existe llamada JARVIS_APP_PRUEBA_999",
+    "herramienta": "informacion_sistema",
+    "argumentos": {},
+    "resultado": "{'computadora': 'PCMARTIN', 'usuario': 'marti', 'windows': 'Windows_NT', 'cpu': 'Intel(R) Core(TM) i7-4790S CPU @ 3.20GHz', 'gpus': ['Intel(R) HD Graphics 4600'], 'ram_total_gb': 15.87, 'ram_disponible_gb': 7.87, 'ram_usable_gb': 15.87, 'cpu_porcentaje': 1.2, 'nucleos': 4, 'hilos': 8}",
+    "correcto": true,
+    "error": null
+  },
+  {
+    "fecha": "2026-09-11T21:23:13.449327",
+    "objetivo": "abre una aplicacion que claramente no existe llamada JARVIS_APP_PRUEBA_999",
+    "herramienta": "informacion_sistema",
+    "argumentos": {},
+    "resultado": "{'computadora': 'PCMARTIN', 'usuario': 'marti', 'windows': 'Windows_NT', 'cpu': 'Intel(R) Core(TM) i7-4790S CPU @ 3.20GHz', 'gpus': ['Intel(R) HD Graphics 4600'], 'ram_total_gb': 15.87, 'ram_disponible_gb': 7.87, 'ram_usable_gb': 15.87, 'cpu_porcentaje': 17.2, 'nucleos': 4, 'hilos': 8}",
+    "correcto": true,
+    "error": null
+  },
+  {
+    "fecha": "2026-09-11T21:25:54.447525",
+    "objetivo": "muestra mis procesos",
+    "herramienta": "listar_procesos",
+    "argumentos": {},
+    "resultado": "[{'pid': 9240, 'nombre': 'llama-server.exe', 'ram_mb': 5430.3}, {'pid': 4092, 'nombre': 'MemCompression', 'ram_mb': 713.7}, {'pid': 4628, 'nombre': 'opera.exe', 'ram_mb': 685.4}, {'pid': 14400, 'nombre': 'opera.exe', 'ram_mb': 545.2}, {'pid': 6212, 'nombre': 'opera.exe', 'ram_mb': 542.9}, {'pid': 532, 'nombre': 'MsMpEng.exe', 'ram_mb': 368.6}, {'pid': 9564, 'nombre': 'Code.exe', 'ram_mb': 360.0}, {'pid': 12132, 'nombre': 'Code.exe', 'ram_mb': 319.3}, {'pid': 10852, 'nombre': 'Code.exe', 'ram_mb': 290.6}, {'pid': 16312, 'nombre': 'opera.exe', 'ram_mb': 274.5}, {'pid': 11156, 'nombre': 'opera.exe', 'ram_mb': 255.1}, {'pid': 3532, 'nombre': 'opera.exe', 'ram_mb': 254.7}, {'pid': 10264, 'nombre': 'opera.exe', 'ram_mb': 252.8}, {'pid': 15296, 'nombre': 'steamwebhelper.exe', 'ram_mb': 248.0}, {'pid': 6184, 'nombre': 'opera.exe', 'ram_mb': 227.1}, {'pid': 3244, 'nombre': 'opera.exe', 'ram_mb': 217.6}, {'pid': 15608, 'nombre': 'opera.exe', 'ram_mb': 215.6}, {'pid': 10436, 'nombre': 'opera.exe', 'ram_mb': 211.7}, {'pid': 12164, 'nombre': 'opera.exe', 'ram_mb': 204.0}, {'pid': 16984, 'nombre': 'opera.exe', 'ram_mb': 202.5}, {'pid': 16776, 'nombre': 'opera.exe', 'ram_mb': 187.7}, {'pid': 12444, 'nombre': 'RobloxPlayerBeta.exe', 'ram_mb': 158.1}, {'pid': 1828, 'nombre': 'opera.exe', 'ram_mb': 153.2}, {'pid': 8828, 'nombre': 'explorer.exe', 'ram_mb': 146.2}, {'pid': 14648, 'nombre': 'steamwebhelper.exe', 'ram_mb': 135.2}, {'pid': 16604, 'nombre': 'Code.exe', 'ram_mb': 127.2}, {'pid': 4228, 'nombre': 'WhatsApp.Root.exe', 'ram_mb': 125.5}, {'pid': 11072, 'nombre': 'Code.exe', 'ram_mb': 119.1}, {'pid': 7028, 'nombre': 'mpv.exe', 'ram_mb': 118.7}, {'pid': 2248, 'nombre': 'Lively.exe', 'ram_mb': 112.7}, {'pid': 13232, 'nombre': 'Code.exe', 'ram_mb': 112.4}, {'pid': 17204, 'nombre': 'opera.exe', 'ram_mb': 109.3}, {'pid': 11360, 'nombre': 'msedge.exe', 'ram_mb': 105.2}, {'pid': 13712, 'nombre': 'Code.exe', 'ram_mb': 103.5}, {'pid': 7568, 'nombre': 'Code.exe', 'ram_mb': 101.7}, {'pid': 1380, 'nombre': 'DSAService.exe', 'ram_mb': 100.4}, {'pid': 9884, 'nombre': 'Code.exe', 'ram_mb': 100.3}, {'pid': 1836, 'nombre': 'powershell.exe', 'ram_mb': 98.1}, {'pid': 8808, 'nombre': 'powershell.exe', 'ram_mb': 92.6}, {'pid': 1412, 'nombre': 'steamwebhelper.exe', 'ram_mb': 88.6}, {'pid': 8236, 'nombre': 'SearchApp.exe', 'ram_mb': 88.6}, {'pid': 124, 'nombre': 'Registry', 'ram_mb': 86.1}, {'pid': 10756, 'nombre': 'EpicGamesLauncher.exe', 'ram_mb': 77.2}, {'pid': 3164, 'nombre': 'fdm.exe', 'ram_mb': 75.9}, {'pid': 9144, 'nombre': 'steam.exe', 'ram_mb': 71.3}, {'pid': 3048, 'nombre': 'SurSvc.exe', 'ram_mb': 66.3}, {'pid': 5736, 'nombre': 'dwm.exe', 'ram_mb': 60.9}, {'pid': 13668, 'nombre': 'StartMenuExperienceHost.exe', 'ram_mb': 60.8}, {'pid': 15744, 'nombre': 'opera.exe', 'ram_mb': 57.0}, {'pid': 16908, 'nombre': 'Code.exe', 'ram_mb': 49.3}, {'pid': 14404, 'nombre': 'LockApp.exe', 'ram_mb': 45.5}, {'pid': 3604, 'nombre': 'esrv_svc.exe', 'ram_mb': 44.4}, {'pid': 8140, 'nombre': 'EpicOnlineServicesUserHelper.exe', 'ram_mb': 43.5}, {'pid': 2964, 'nombre': 'svchost.exe', 'ram_mb': 43.0}, {'pid': 13184, 'nombre': 'ollama.exe', 'ram_mb': 41.8}, {'pid': 7088, 'nombre': 'svchost.exe', 'ram_mb': 41.6}, {'pid': 14860, 'nombre': 'ShellExperienceHost.exe', 'ram_mb': 41.2}, {'pid': 2256, 'nombre': 'DSAUpdateService.exe', 'ram_mb': 40.2}, {'pid': 15072, 'nombre': 'ollama app.exe', 'ram_mb': 39.3}, {'pid': 11160, 'nombre': 'CodeSetup-stable-645f29cc3176500b4b5762ba887cf2a7f0ffdf2c.tmp', 'ram_mb': 39.2}, {'pid': 11524, 'nombre': 'TextInputHost.exe', 'ram_mb': 38.8}, {'pid': 5548, 'nombre': 'gamingservices.exe', 'ram_mb': 38.7}, {'pid': 15420, 'nombre': 'RobloxCrashHandler.exe', 'ram_mb': 38.3}, {'pid': 1748, 'nombre': 'TranslucentTB.exe', 'ram_mb': 38.0}, {'pid': 5592, 'nombre': 'SearchIndexer.exe', 'ram_mb': 37.2}, {'pid': 4, 'nombre': 'System', 'ram_mb': 36.2}, {'pid': 3732, 'nombre': 'opera.exe', 'ram_mb': 35.4}, {'pid': 2952, 'nombre': 'svchost.exe', 'ram_mb': 35.3}, {'pid': 3112, 'nombre': 'OfficeClickToRun.exe', 'ram_mb': 35.3}, {'pid': 1400, 'nombre': 'msedge.exe', 'ram_mb': 34.6}, {'pid': 9920, 'nombre': 'RuntimeBroker.exe', 'ram_mb': 33.2}, {'pid': 4084, 'nombre': 'steamwebhelper.exe', 'ram_mb': 32.9}, {'pid': 13768, 'nombre': 'Code.exe', 'ram_mb': 32.7}, {'pid': 11688, 'nombre': 'svchost.exe', 'ram_mb': 32.2}, {'pid': 7420, 'nombre': 'svchost.exe', 'ram_mb': 32.1}, {'pid': 1648, 'nombre': 'python.exe', 'ram_mb': 32.0}, {'pid': 12876, 'nombre': 'EpicWebHelper.exe', 'ram_mb': 31.8}, {'pid': 4240, 'nombre': 'warp-svc.exe', 'ram_mb': 31.2}, {'pid': 1000, 'nombre': 'svchost.exe', 'ram_mb': 30.6}, {'pid': 10164, 'nombre': 'RuntimeBroker.exe', 'ram_mb': 30.2}, {'pid': 1760, 'nombre': 'sihost.exe', 'ram_mb': 29.3}, {'pid': 2356, 'nombre': 'EpicWebHelper.exe', 'ram_mb': 26.5}, {'pid': 3696, 'nombre': 'RuntimeBroker.exe', 'ram_mb': 26.1}, {'pid': 7208, 'nombre': 'esrv.exe', 'ram_mb': 25.6}, {'pid': 5228, 'nombre': 'steamwebhelper.exe', 'ram_mb': 25.5}, {'pid': 6128, 'nombre': 'svchost.exe', 'ram_mb': 25.5}, {'pid': 788, 'nombre': 'lsass.exe', 'ram_mb': 25.4}, {'pid': 1936, 'nombre': 'EpicOnlineServicesUserHelper.exe', 'ram_mb': 25.3}, {'pid': 2284, 'nombre': 'opera.exe', 'ram_mb': 25.3}, {'pid': 6580, 'nombre': 'ApplicationFrameHost.exe', 'ram_mb': 24.7}, {'pid': 8884, 'nombre': 'svchost.exe', 'ram_mb': 21.1}, {'pid': 12184, 'nombre': 'msedge.exe', 'ram_mb': 21.1}, {'pid': 2560, 'nombre': 'spoolsv.exe', 'ram_mb': 20.9}, {'pid': 5392, 'nombre': 'MoUsoCoreWorker.exe', 'ram_mb': 20.8}, {'pid': 4536, 'nombre': 'svchost.exe', 'ram_mb': 20.0}, {'pid': 9040, 'nombre': 'ctfmon.exe', 'ram_mb': 19.9}, {'pid': 16584, 'nombre': 'opera.exe', 'ram_mb': 19.8}, {'pid': 728, 'nombre': 'svchost.exe', 'ram_mb': 19.7}, {'pid': 8920, 'nombre': 'RuntimeBroker.exe', 'ram_mb': 19.2}, {'pid': 9384, 'nombre': 'opera.exe', 'ram_mb': 18.7}]",
+    "correcto": true,
+    "error": null
+  },
+  {
+    "fecha": "2026-09-11T21:25:57.772312",
+    "objetivo": "abre una aplicacion que claramente no existe llamada JARVIS_APP_PRUEBA_999",
+    "herramienta": "informacion_sistema",
+    "argumentos": {},
+    "resultado": "{'computadora': 'PCMARTIN', 'usuario': 'marti', 'windows': 'Windows_NT', 'cpu': 'Intel(R) Core(TM) i7-4790S CPU @ 3.20GHz', 'gpus': ['Intel(R) HD Graphics 4600'], 'ram_total_gb': 15.87, 'ram_disponible_gb': 3.03, 'ram_usable_gb': 15.87, 'cpu_porcentaje': 4.3, 'nucleos': 4, 'hilos': 8}",
+    "correcto": true,
+    "error": null
+  },
+  {
+    "fecha": "2026-09-11T21:55:44.549795",
+    "objetivo": "muestra la ram",
+    "herramienta": "informacion_sistema",
+    "argumentos": {},
+    "resultado": "{'computadora': 'PCMARTIN', 'usuario': 'marti', 'windows': 'Windows_NT', 'cpu': 'Intel(R) Core(TM) i7-4790S CPU @ 3.20GHz', 'gpus': ['Intel(R) HD Graphics 4600'], 'ram_total_gb': 15.87, 'ram_disponible_gb': 8.2, 'ram_usable_gb': 15.87, 'cpu_porcentaje': 1.6, 'nucleos': 4, 'hilos': 8}",
+    "correcto": true,
+    "error": null
+  },
+  {
+    "fecha": "2026-09-11T21:55:46.808828",
+    "objetivo": "cuanta ram tengo",
+    "herramienta": "informacion_sistema",
+    "argumentos": {},
+    "resultado": "{'computadora': 'PCMARTIN', 'usuario': 'marti', 'windows': 'Windows_NT', 'cpu': 'Intel(R) Core(TM) i7-4790S CPU @ 3.20GHz', 'gpus': ['Intel(R) HD Graphics 4600'], 'ram_total_gb': 15.87, 'ram_disponible_gb': 8.29, 'ram_usable_gb': 15.87, 'cpu_porcentaje': 2.0, 'nucleos': 4, 'hilos': 8}",
+    "correcto": true,
+    "error": null
+  },
+  {
+    "fecha": "2026-09-11T21:55:49.158396",
+    "objetivo": "informacion de mi pc",
+    "herramienta": "informacion_sistema",
+    "argumentos": {},
+    "resultado": "{'computadora': 'PCMARTIN', 'usuario': 'marti', 'windows': 'Windows_NT', 'cpu': 'Intel(R) Core(TM) i7-4790S CPU @ 3.20GHz', 'gpus': ['Intel(R) HD Graphics 4600'], 'ram_total_gb': 15.87, 'ram_disponible_gb': 8.31, 'ram_usable_gb': 15.87, 'cpu_porcentaje': 1.2, 'nucleos': 4, 'hilos': 8}",
+    "correcto": true,
+    "error": null
+  },
+  {
+    "fecha": "2026-09-11T22:00:59.739973",
+    "objetivo": "abre una aplicacion que no existe llamada JARVIS_RETRY_PRUEBA_999",
+    "herramienta": "buscar_app",
+    "argumentos": {
+      "nombre": "JARVIS_RETRY_PRUEBA_999"
+    },
+    "resultado": "None",
+    "correcto": false,
+    "error": "None"
+  },
+  {
+    "fecha": "2026-09-11T22:13:39.439942",
+    "objetivo": "abre una aplicacion que no existe llamada JARVIS_RETRY_999",
+    "herramienta": "buscar_app",
+    "argumentos": {
+      "nombre": "JARVIS_RETRY_999"
+    },
+    "resultado": "None",
+    "correcto": false,
+    "error": "None"
+  },
+  {
+    "fecha": "2026-09-11T22:25:10.918533",
+    "objetivo": "abre una aplicacion que no existe llamada JARVIS_ALPHA_RETRY_999",
+    "herramienta": "buscar_app",
+    "argumentos": {
+      "nombre": "JARVIS_ALPHA_RETRY_999"
+    },
+    "resultado": "None",
+    "correcto": false,
+    "error": "None"
+  },
+  {
+    "fecha": "2026-09-11T22:31:29.412255",
+    "objetivo": "abre una aplicacion que no existe llamada JARVIS_ALPHA_RETRY_999",
+    "herramienta": "buscar_app",
+    "argumentos": {
+      "nombre": "JARVIS_ALPHA_RETRY_999"
+    },
+    "resultado": "None",
+    "correcto": false,
+    "error": "None"
+  },
+  {
+    "fecha": "2026-09-11T22:32:03.485983",
+    "objetivo": "abre una aplicacion que no existe llamada JARVIS_ALPHA_RETRY_999",
+    "herramienta": "listar_procesos",
+    "argumentos": {
+      "limite": 30
+    },
+    "resultado": "[{'pid': 5700, 'nombre': 'llama-server.exe', 'ram_mb': 5744.7}, {'pid': 4092, 'nombre': 'MemCompression', 'ram_mb': 881.9}, {'pid': 9556, 'nombre': 'opera.exe', 'ram_mb': 706.3}, {'pid': 4628, 'nombre': 'opera.exe', 'ram_mb': 610.6}, {'pid': 6212, 'nombre': 'opera.exe', 'ram_mb': 566.8}, {'pid': 14400, 'nombre': 'opera.exe', 'ram_mb': 551.7}, {'pid': 3732, 'nombre': 'opera.exe', 'ram_mb': 384.3}, {'pid': 532, 'nombre': 'MsMpEng.exe', 'ram_mb': 362.7}, {'pid': 9564, 'nombre': 'Code.exe', 'ram_mb': 274.4}, {'pid': 16312, 'nombre': 'opera.exe', 'ram_mb': 259.0}, {'pid': 15296, 'nombre': 'steamwebhelper.exe', 'ram_mb': 258.3}, {'pid': 3532, 'nombre': 'opera.exe', 'ram_mb': 249.9}, {'pid': 11156, 'nombre': 'opera.exe', 'ram_mb': 237.4}, {'pid': 10264, 'nombre': 'opera.exe', 'ram_mb': 232.8}, {'pid': 1828, 'nombre': 'opera.exe', 'ram_mb': 229.0}, {'pid': 12164, 'nombre': 'opera.exe', 'ram_mb': 216.9}, {'pid': 3244, 'nombre': 'opera.exe', 'ram_mb': 216.0}, {'pid': 15608, 'nombre': 'opera.exe', 'ram_mb': 214.3}, {'pid': 6184, 'nombre': 'opera.exe', 'ram_mb': 209.0}, {'pid': 10852, 'nombre': 'Code.exe', 'ram_mb': 207.9}, {'pid': 10436, 'nombre': 'opera.exe', 'ram_mb': 202.1}, {'pid': 12132, 'nombre': 'Code.exe', 'ram_mb': 198.5}, {'pid': 16984, 'nombre': 'opera.exe', 'ram_mb': 197.8}, {'pid': 16776, 'nombre': 'opera.exe', 'ram_mb': 190.4}, {'pid': 12444, 'nombre': 'RobloxPlayerBeta.exe', 'ram_mb': 158.4}, {'pid': 8828, 'nombre': 'explorer.exe', 'ram_mb': 139.2}, {'pid': 14648, 'nombre': 'steamwebhelper.exe', 'ram_mb': 135.1}, {'pid': 3164, 'nombre': 'fdm.exe', 'ram_mb': 128.8}, {'pid': 4228, 'nombre': 'WhatsApp.Root.exe', 'ram_mb': 122.4}, {'pid': 16604, 'nombre': 'Code.exe', 'ram_mb': 111.8}]",
+    "correcto": true,
+    "error": null
+  },
+  {
+    "fecha": "2026-09-11T22:34:56.085418",
+    "objetivo": "abre una aplicacion que no existe llamada JARVIS_ALPHA_RETRY_999",
+    "herramienta": "buscar_app",
+    "argumentos": {
+      "nombre": "JARVIS_ALPHA_RETRY_999"
+    },
+    "resultado": "None",
+    "correcto": false,
+    "error": "None"
+  },
+  {
+    "fecha": "2026-09-11T22:36:43.977752",
+    "objetivo": "abre una aplicacion que no existe llamada JARVIS_ALPHA_RETRY_999",
+    "herramienta": "listar_procesos",
+    "argumentos": {
+      "limite": 30
+    },
+    "resultado": "[{'pid': 5700, 'nombre': 'llama-server.exe', 'ram_mb': 6061.0}, {'pid': 4092, 'nombre': 'MemCompression', 'ram_mb': 896.4}, {'pid': 9556, 'nombre': 'opera.exe', 'ram_mb': 662.3}, {'pid': 4628, 'nombre': 'opera.exe', 'ram_mb': 579.6}, {'pid': 6212, 'nombre': 'opera.exe', 'ram_mb': 567.3}, {'pid': 14400, 'nombre': 'opera.exe', 'ram_mb': 549.9}, {'pid': 3732, 'nombre': 'opera.exe', 'ram_mb': 384.1}, {'pid': 532, 'nombre': 'MsMpEng.exe', 'ram_mb': 363.0}, {'pid': 9564, 'nombre': 'Code.exe', 'ram_mb': 274.8}, {'pid': 16312, 'nombre': 'opera.exe', 'ram_mb': 258.8}, {'pid': 15296, 'nombre': 'steamwebhelper.exe', 'ram_mb': 256.6}, {'pid': 3532, 'nombre': 'opera.exe', 'ram_mb': 248.6}, {'pid': 11156, 'nombre': 'opera.exe', 'ram_mb': 237.4}, {'pid': 1828, 'nombre': 'opera.exe', 'ram_mb': 236.8}, {'pid': 10264, 'nombre': 'opera.exe', 'ram_mb': 231.6}, {'pid': 12164, 'nombre': 'opera.exe', 'ram_mb': 216.9}, {'pid': 3244, 'nombre': 'opera.exe', 'ram_mb': 215.3}, {'pid': 15608, 'nombre': 'opera.exe', 'ram_mb': 214.3}, {'pid': 6184, 'nombre': 'opera.exe', 'ram_mb': 209.0}, {'pid': 10436, 'nombre': 'opera.exe', 'ram_mb': 202.1}, {'pid': 16984, 'nombre': 'opera.exe', 'ram_mb': 197.8}, {'pid': 12132, 'nombre': 'Code.exe', 'ram_mb': 197.6}, {'pid': 10852, 'nombre': 'Code.exe', 'ram_mb': 195.5}, {'pid': 16776, 'nombre': 'opera.exe', 'ram_mb': 190.4}, {'pid': 12444, 'nombre': 'RobloxPlayerBeta.exe', 'ram_mb': 158.4}, {'pid': 8828, 'nombre': 'explorer.exe', 'ram_mb': 138.4}, {'pid': 14648, 'nombre': 'steamwebhelper.exe', 'ram_mb': 135.1}, {'pid': 3164, 'nombre': 'fdm.exe', 'ram_mb': 128.8}, {'pid': 4228, 'nombre': 'WhatsApp.Root.exe', 'ram_mb': 122.4}, {'pid': 16604, 'nombre': 'Code.exe', 'ram_mb': 113.8}]",
+    "correcto": true,
+    "error": null
+  },
+  {
+    "fecha": "2026-09-11T22:44:12.660625",
+    "objetivo": "muestra mis procesos",
+    "herramienta": "listar_procesos",
+    "argumentos": {},
+    "resultado": "[{'pid': 3344, 'nombre': 'llama-server.exe', 'ram_mb': 5430.4}, {'pid': 15468, 'nombre': 'python.exe', 'ram_mb': 1507.2}, {'pid': 532, 'nombre': 'MsMpEng.exe', 'ram_mb': 356.0}, {'pid': 9564, 'nombre': 'Code.exe', 'ram_mb': 274.8}, {'pid': 15296, 'nombre': 'steamwebhelper.exe', 'ram_mb': 252.8}, {'pid': 10852, 'nombre': 'Code.exe', 'ram_mb': 213.0}, {'pid': 12132, 'nombre': 'Code.exe', 'ram_mb': 199.9}, {'pid': 8828, 'nombre': 'explorer.exe', 'ram_mb': 160.9}, {'pid': 4092, 'nombre': 'MemCompression', 'ram_mb': 159.8}, {'pid': 12444, 'nombre': 'RobloxPlayerBeta.exe', 'ram_mb': 158.0}, {'pid': 14648, 'nombre': 'steamwebhelper.exe', 'ram_mb': 135.0}, {'pid': 4228, 'nombre': 'WhatsApp.Root.exe', 'ram_mb': 122.4}, {'pid': 16604, 'nombre': 'Code.exe', 'ram_mb': 121.0}, {'pid': 11360, 'nombre': 'msedge.exe', 'ram_mb': 105.2}, {'pid': 11072, 'nombre': 'Code.exe', 'ram_mb': 99.1}, {'pid': 1380, 'nombre': 'DSAService.exe', 'ram_mb': 93.6}, {'pid': 7568, 'nombre': 'Code.exe', 'ram_mb': 93.0}, {'pid': 13232, 'nombre': 'Code.exe', 'ram_mb': 92.8}, {'pid': 13712, 'nombre': 'Code.exe', 'ram_mb': 92.3}, {'pid': 9884, 'nombre': 'Code.exe', 'ram_mb': 91.4}, {'pid': 124, 'nombre': 'Registry', 'ram_mb': 85.6}, {'pid': 8236, 'nombre': 'SearchApp.exe', 'ram_mb': 85.6}, {'pid': 1836, 'nombre': 'powershell.exe', 'ram_mb': 81.1}, {'pid': 3164, 'nombre': 'fdm.exe', 'ram_mb': 78.0}, {'pid': 10756, 'nombre': 'EpicGamesLauncher.exe', 'ram_mb': 77.1}, {'pid': 1412, 'nombre': 'steamwebhelper.exe', 'ram_mb': 76.6}, {'pid': 9144, 'nombre': 'steam.exe', 'ram_mb': 73.8}, {'pid': 3048, 'nombre': 'SurSvc.exe', 'ram_mb': 66.0}, {'pid': 13668, 'nombre': 'StartMenuExperienceHost.exe', 'ram_mb': 58.2}, {'pid': 5736, 'nombre': 'dwm.exe', 'ram_mb': 55.8}, {'pid': 8808, 'nombre': 'powershell.exe', 'ram_mb': 52.3}, {'pid': 16908, 'nombre': 'Code.exe', 'ram_mb': 47.6}, {'pid': 14404, 'nombre': 'LockApp.exe', 'ram_mb': 45.5}, {'pid': 9732, 'nombre': 'esrv_svc.exe', 'ram_mb': 44.6}, {'pid': 8140, 'nombre': 'EpicOnlineServicesUserHelper.exe', 'ram_mb': 43.6}, {'pid': 14860, 'nombre': 'ShellExperienceHost.exe', 'ram_mb': 43.1}, {'pid': 2964, 'nombre': 'svchost.exe', 'ram_mb': 41.7}, {'pid': 7088, 'nombre': 'svchost.exe', 'ram_mb': 41.6}, {'pid': 13184, 'nombre': 'ollama.exe', 'ram_mb': 41.6}, {'pid': 2256, 'nombre': 'DSAUpdateService.exe', 'ram_mb': 40.6}, {'pid': 5548, 'nombre': 'gamingservices.exe', 'ram_mb': 39.0}, {'pid': 15072, 'nombre': 'ollama app.exe', 'ram_mb': 38.9}, {'pid': 11524, 'nombre': 'TextInputHost.exe', 'ram_mb': 38.8}, {'pid': 1748, 'nombre': 'TranslucentTB.exe', 'ram_mb': 38.2}, {'pid': 5592, 'nombre': 'SearchIndexer.exe', 'ram_mb': 38.2}, {'pid': 3112, 'nombre': 'OfficeClickToRun.exe', 'ram_mb': 36.9}, {'pid': 4, 'nombre': 'System', 'ram_mb': 36.5}, {'pid': 1400, 'nombre': 'msedge.exe', 'ram_mb': 33.8}, {'pid': 4084, 'nombre': 'steamwebhelper.exe', 'ram_mb': 33.1}, {'pid': 9920, 'nombre': 'RuntimeBroker.exe', 'ram_mb': 32.2}, {'pid': 12876, 'nombre': 'EpicWebHelper.exe', 'ram_mb': 31.9}, {'pid': 4240, 'nombre': 'warp-svc.exe', 'ram_mb': 31.6}, {'pid': 11688, 'nombre': 'svchost.exe', 'ram_mb': 31.3}, {'pid': 13768, 'nombre': 'Code.exe', 'ram_mb': 31.2}, {'pid': 10164, 'nombre': 'RuntimeBroker.exe', 'ram_mb': 31.1}, {'pid': 1000, 'nombre': 'svchost.exe', 'ram_mb': 30.7}, {'pid': 1760, 'nombre': 'sihost.exe', 'ram_mb': 29.7}, {'pid': 7208, 'nombre': 'esrv.exe', 'ram_mb': 28.9}, {'pid': 7420, 'nombre': 'svchost.exe', 'ram_mb': 27.8}, {'pid': 3696, 'nombre': 'RuntimeBroker.exe', 'ram_mb': 27.3}, {'pid': 6128, 'nombre': 'svchost.exe', 'ram_mb': 26.8}, {'pid': 5392, 'nombre': 'MoUsoCoreWorker.exe', 'ram_mb': 26.7}, {'pid': 2356, 'nombre': 'EpicWebHelper.exe', 'ram_mb': 26.5}, {'pid': 2952, 'nombre': 'svchost.exe', 'ram_mb': 26.3}, {'pid': 12488, 'nombre': 'svchost.exe', 'ram_mb': 25.7}, {'pid': 5228, 'nombre': 'steamwebhelper.exe', 'ram_mb': 25.4}, {'pid': 1936, 'nombre': 'EpicOnlineServicesUserHelper.exe', 'ram_mb': 25.3}, {'pid': 788, 'nombre': 'lsass.exe', 'ram_mb': 25.1}, {'pid': 6580, 'nombre': 'ApplicationFrameHost.exe', 'ram_mb': 24.9}, {'pid': 15740, 'nombre': 'smartscreen.exe', 'ram_mb': 24.5}, {'pid': 8884, 'nombre': 'svchost.exe', 'ram_mb': 22.9}, {'pid': 4536, 'nombre': 'svchost.exe', 'ram_mb': 21.4}, {'pid': 11160, 'nombre': 'CodeSetup-stable-645f29cc3176500b4b5762ba887cf2a7f0ffdf2c.tmp', 'ram_mb': 21.2}, {'pid': 12184, 'nombre': 'msedge.exe', 'ram_mb': 21.1}, {'pid': 2560, 'nombre': 'spoolsv.exe', 'ram_mb': 21.0}, {'pid': 9040, 'nombre': 'ctfmon.exe', 'ram_mb': 20.4}, {'pid': 728, 'nombre': 'svchost.exe', 'ram_mb': 18.8}, {'pid': 2996, 'nombre': 'svchost.exe', 'ram_mb': 18.8}, {'pid': 696, 'nombre': 'svchost.exe', 'ram_mb': 18.2}, {'pid': 15664, 'nombre': 'RuntimeBroker.exe', 'ram_mb': 17.8}, {'pid': 8128, 'nombre': 'svchost.exe', 'ram_mb': 17.6}, {'pid': 2384, 'nombre': 'svchost.exe', 'ram_mb': 17.3}, {'pid': 13944, 'nombre': 'taskhostw.exe', 'ram_mb': 17.3}, {'pid': 6504, 'nombre': 'svchost.exe', 'ram_mb': 16.8}, {'pid': 8920, 'nombre': 'RuntimeBroker.exe', 'ram_mb': 16.7}, {'pid': 2708, 'nombre': 'svchost.exe', 'ram_mb': 16.5}, {'pid': 3152, 'nombre': 'MpDefenderCoreService.exe', 'ram_mb': 16.5}, {'pid': 2988, 'nombre': 'svchost.exe', 'ram_mb': 16.4}, {'pid': 7976, 'nombre': 'svchost.exe', 'ram_mb': 16.3}, {'pid': 15708, 'nombre': 'msedge.exe', 'ram_mb': 16.0}, {'pid': 1700, 'nombre': 'svchost.exe', 'ram_mb': 15.4}, {'pid': 15816, 'nombre': 'steamwebhelper.exe', 'ram_mb': 15.3}, {'pid': 1224, 'nombre': 'svchost.exe', 'ram_mb': 14.3}, {'pid': 12384, 'nombre': 'BrStMonW.exe', 'ram_mb': 14.3}, {'pid': 2360, 'nombre': 'LmsaWindowsService.exe', 'ram_mb': 14.2}, {'pid': 3004, 'nombre': 'svchost.exe', 'ram_mb': 14.2}, {'pid': 14040, 'nombre': 'GameInputSvc.exe', 'ram_mb': 13.8}, {'pid': 9360, 'nombre': 'fontdrvhost.exe', 'ram_mb': 13.6}, {'pid': 2152, 'nombre': 'svchost.exe', 'ram_mb': 13.5}, {'pid': 1588, 'nombre': 'svchost.exe', 'ram_mb': 12.9}]",
+    "correcto": true,
+    "error": null
+  },
+  {
+    "fecha": "2026-09-11T22:45:41.780773",
+    "objetivo": "abre opera gx",
+    "herramienta": "abrir_app",
+    "argumentos": {
+      "nombre": "Opera GX"
+    },
+    "resultado": "Opened: navegador opera gx",
+    "correcto": true,
+    "error": null
+  },
+  {
+    "fecha": "2026-09-11T22:53:16.386505",
+    "objetivo": "informe del pc",
+    "herramienta": "informacion_sistema",
+    "argumentos": {},
+    "resultado": "{'computadora': 'PCMARTIN', 'usuario': 'marti', 'windows': 'Windows_NT', 'cpu': 'Intel(R) Core(TM) i7-4790S CPU @ 3.20GHz', 'gpus': ['Intel(R) HD Graphics 4600'], 'ram_total_gb': 15.87, 'ram_disponible_gb': 2.9, 'ram_usable_gb': 15.87, 'cpu_porcentaje': 2.3, 'nucleos': 4, 'hilos': 8}",
+    "correcto": true,
+    "error": null
+  },
+  {
+    "fecha": "2026-09-11T23:31:11.642832",
+    "objetivo": "muestra mis procesos",
+    "herramienta": "listar_procesos",
+    "argumentos": {},
+    "resultado": "[{'pid': 11372, 'nombre': 'llama-server.exe', 'ram_mb': 5429.5}, {'pid': 5276, 'nombre': 'python.exe', 'ram_mb': 1506.7}, {'pid': 15564, 'nombre': 'opera.exe', 'ram_mb': 538.6}, {'pid': 11960, 'nombre': 'opera.exe', 'ram_mb': 526.9}, {'pid': 10980, 'nombre': 'opera.exe', 'ram_mb': 463.7}, {'pid': 3200, 'nombre': 'opera.exe', 'ram_mb': 397.3}, {'pid': 16524, 'nombre': 'opera.exe', 'ram_mb': 386.5}, {'pid': 532, 'nombre': 'MsMpEng.exe', 'ram_mb': 368.9}, {'pid': 9564, 'nombre': 'Code.exe', 'ram_mb': 279.0}, {'pid': 4092, 'nombre': 'MemCompression', 'ram_mb': 264.2}, {'pid': 8932, 'nombre': 'opera.exe', 'ram_mb': 255.7}, {'pid': 10852, 'nombre': 'Code.exe', 'ram_mb': 227.8}, {'pid': 6612, 'nombre': 'opera.exe', 'ram_mb': 226.1}, {'pid': 6256, 'nombre': 'opera.exe', 'ram_mb': 213.9}, {'pid': 8752, 'nombre': 'opera.exe', 'ram_mb': 205.0}, {'pid': 12132, 'nombre': 'Code.exe', 'ram_mb': 199.6}, {'pid': 12444, 'nombre': 'RobloxPlayerBeta.exe', 'ram_mb': 158.6}, {'pid': 8380, 'nombre': 'opera.exe', 'ram_mb': 156.2}, {'pid': 8828, 'nombre': 'explorer.exe', 'ram_mb': 154.9}, {'pid': 3164, 'nombre': 'fdm.exe', 'ram_mb': 126.5}, {'pid': 4228, 'nombre': 'WhatsApp.Root.exe', 'ram_mb': 122.0}, {'pid': 16604, 'nombre': 'Code.exe', 'ram_mb': 115.9}, {'pid': 11360, 'nombre': 'msedge.exe', 'ram_mb': 106.5}, {'pid': 11072, 'nombre': 'Code.exe', 'ram_mb': 100.8}, {'pid': 9884, 'nombre': 'Code.exe', 'ram_mb': 94.1}, {'pid': 1380, 'nombre': 'DSAService.exe', 'ram_mb': 93.8}, {'pid': 13712, 'nombre': 'Code.exe', 'ram_mb': 91.6}, {'pid': 13232, 'nombre': 'Code.exe', 'ram_mb': 91.4}, {'pid': 7568, 'nombre': 'Code.exe', 'ram_mb': 90.5}, {'pid': 8236, 'nombre': 'SearchApp.exe', 'ram_mb': 85.6}, {'pid': 124, 'nombre': 'Registry', 'ram_mb': 85.1}, {'pid': 10756, 'nombre': 'EpicGamesLauncher.exe', 'ram_mb': 77.7}, {'pid': 1836, 'nombre': 'powershell.exe', 'ram_mb': 74.0}, {'pid': 3048, 'nombre': 'SurSvc.exe', 'ram_mb': 65.7}, {'pid': 13668, 'nombre': 'StartMenuExperienceHost.exe', 'ram_mb': 57.2}, {'pid': 5736, 'nombre': 'dwm.exe', 'ram_mb': 54.5}, {'pid': 8808, 'nombre': 'powershell.exe', 'ram_mb': 52.7}, {'pid': 11420, 'nombre': 'opera.exe', 'ram_mb': 52.2}, {'pid': 11524, 'nombre': 'TextInputHost.exe', 'ram_mb': 48.3}, {'pid': 16908, 'nombre': 'Code.exe', 'ram_mb': 47.6}, {'pid': 9732, 'nombre': 'esrv_svc.exe', 'ram_mb': 46.1}, {'pid': 14404, 'nombre': 'LockApp.exe', 'ram_mb': 45.5}, {'pid': 8140, 'nombre': 'EpicOnlineServicesUserHelper.exe', 'ram_mb': 45.0}, {'pid': 14860, 'nombre': 'ShellExperienceHost.exe', 'ram_mb': 43.1}, {'pid': 2964, 'nombre': 'svchost.exe', 'ram_mb': 41.6}, {'pid': 7088, 'nombre': 'svchost.exe', 'ram_mb': 41.5}, {'pid': 13184, 'nombre': 'ollama.exe', 'ram_mb': 40.8}, {'pid': 2256, 'nombre': 'DSAUpdateService.exe', 'ram_mb': 40.6}, {'pid': 15072, 'nombre': 'ollama app.exe', 'ram_mb': 39.4}, {'pid': 5548, 'nombre': 'gamingservices.exe', 'ram_mb': 38.9}, {'pid': 1748, 'nombre': 'TranslucentTB.exe', 'ram_mb': 38.0}, {'pid': 2952, 'nombre': 'svchost.exe', 'ram_mb': 37.5}, {'pid': 5592, 'nombre': 'SearchIndexer.exe', 'ram_mb': 36.8}, {'pid': 4, 'nombre': 'System', 'ram_mb': 36.6}, {'pid': 3112, 'nombre': 'OfficeClickToRun.exe', 'ram_mb': 36.2}, {'pid': 1400, 'nombre': 'msedge.exe', 'ram_mb': 34.6}, {'pid': 9920, 'nombre': 'RuntimeBroker.exe', 'ram_mb': 33.0}, {'pid': 11688, 'nombre': 'svchost.exe', 'ram_mb': 32.9}, {'pid': 8976, 'nombre': 'opera.exe', 'ram_mb': 32.1}, {'pid': 12876, 'nombre': 'EpicWebHelper.exe', 'ram_mb': 31.8}, {'pid': 4240, 'nombre': 'warp-svc.exe', 'ram_mb': 31.4}, {'pid': 13768, 'nombre': 'Code.exe', 'ram_mb': 31.1}, {'pid': 1000, 'nombre': 'svchost.exe', 'ram_mb': 30.6}, {'pid': 10164, 'nombre': 'RuntimeBroker.exe', 'ram_mb': 30.2}, {'pid': 7208, 'nombre': 'esrv.exe', 'ram_mb': 29.7}, {'pid': 11044, 'nombre': 'opera.exe', 'ram_mb': 29.2}, {'pid': 7420, 'nombre': 'svchost.exe', 'ram_mb': 28.6}, {'pid': 1760, 'nombre': 'sihost.exe', 'ram_mb': 28.0}, {'pid': 3696, 'nombre': 'RuntimeBroker.exe', 'ram_mb': 27.4}, {'pid': 2356, 'nombre': 'EpicWebHelper.exe', 'ram_mb': 26.5}, {'pid': 5392, 'nombre': 'MoUsoCoreWorker.exe', 'ram_mb': 26.3}, {'pid': 6128, 'nombre': 'svchost.exe', 'ram_mb': 25.9}, {'pid': 1936, 'nombre': 'EpicOnlineServicesUserHelper.exe', 'ram_mb': 25.3}, {'pid': 788, 'nombre': 'lsass.exe', 'ram_mb': 25.1}, {'pid': 6580, 'nombre': 'ApplicationFrameHost.exe', 'ram_mb': 24.8}, {'pid': 8884, 'nombre': 'svchost.exe', 'ram_mb': 23.5}, {'pid': 1720, 'nombre': 'opera.exe', 'ram_mb': 21.4}, {'pid': 4536, 'nombre': 'svchost.exe', 'ram_mb': 21.4}, {'pid': 11160, 'nombre': 'CodeSetup-stable-645f29cc3176500b4b5762ba887cf2a7f0ffdf2c.tmp', 'ram_mb': 21.1}, {'pid': 12184, 'nombre': 'msedge.exe', 'ram_mb': 21.1}, {'pid': 2560, 'nombre': 'spoolsv.exe', 'ram_mb': 20.9}, {'pid': 9040, 'nombre': 'ctfmon.exe', 'ram_mb': 20.4}, {'pid': 728, 'nombre': 'svchost.exe', 'ram_mb': 19.6}, {'pid': 4128, 'nombre': 'opera.exe', 'ram_mb': 19.1}, {'pid': 8920, 'nombre': 'RuntimeBroker.exe', 'ram_mb': 19.0}, {'pid': 2996, 'nombre': 'svchost.exe', 'ram_mb': 18.8}, {'pid': 13944, 'nombre': 'taskhostw.exe', 'ram_mb': 18.4}, {'pid': 696, 'nombre': 'svchost.exe', 'ram_mb': 18.3}, {'pid': 2384, 'nombre': 'svchost.exe', 'ram_mb': 18.3}, {'pid': 15664, 'nombre': 'RuntimeBroker.exe', 'ram_mb': 17.8}, {'pid': 8128, 'nombre': 'svchost.exe', 'ram_mb': 17.6}, {'pid': 3152, 'nombre': 'MpDefenderCoreService.exe', 'ram_mb': 17.4}, {'pid': 6504, 'nombre': 'svchost.exe', 'ram_mb': 16.6}, {'pid': 7976, 'nombre': 'svchost.exe', 'ram_mb': 16.4}, {'pid': 2708, 'nombre': 'svchost.exe', 'ram_mb': 16.2}, {'pid': 15708, 'nombre': 'msedge.exe', 'ram_mb': 16.0}, {'pid': 2988, 'nombre': 'svchost.exe', 'ram_mb': 15.9}, {'pid': 1700, 'nombre': 'svchost.exe', 'ram_mb': 15.2}, {'pid': 2360, 'nombre': 'LmsaWindowsService.exe', 'ram_mb': 14.2}, {'pid': 3004, 'nombre': 'svchost.exe', 'ram_mb': 14.2}]",
+    "correcto": true,
+    "error": null
+  },
+  {
+    "fecha": "2026-09-11T23:34:14.707789",
+    "objetivo": "abre una aplicacion que claramente no existe llamada JARVIS_ALPHA_PRUEBA_999",
+    "herramienta": "buscar_app",
+    "argumentos": {
+      "nombre": "JARVIS_ALPHA_PRUEBA_999"
+    },
+    "resultado": "None",
+    "correcto": false,
+    "error": "None"
+  },
+  {
+    "fecha": "2026-09-11T23:36:08.043401",
+    "objetivo": "abre una aplicacion que claramente no existe llamada JARVIS_ALPHA_PRUEBA_999",
+    "herramienta": "listar_procesos",
+    "argumentos": {
+      "limite": 30
+    },
+    "resultado": "[{'pid': 11372, 'nombre': 'llama-server.exe', 'ram_mb': 5741.8}, {'pid': 5276, 'nombre': 'python.exe', 'ram_mb': 1761.2}, {'pid': 15564, 'nombre': 'opera.exe', 'ram_mb': 533.3}, {'pid': 11960, 'nombre': 'opera.exe', 'ram_mb': 517.1}, {'pid': 10980, 'nombre': 'opera.exe', 'ram_mb': 464.1}, {'pid': 532, 'nombre': 'MsMpEng.exe', 'ram_mb': 381.4}, {'pid': 16524, 'nombre': 'opera.exe', 'ram_mb': 376.9}, {'pid': 3200, 'nombre': 'opera.exe', 'ram_mb': 376.1}, {'pid': 4092, 'nombre': 'MemCompression', 'ram_mb': 288.4}, {'pid': 9564, 'nombre': 'Code.exe', 'ram_mb': 279.1}, {'pid': 8932, 'nombre': 'opera.exe', 'ram_mb': 252.8}, {'pid': 10852, 'nombre': 'Code.exe', 'ram_mb': 217.1}, {'pid': 6256, 'nombre': 'opera.exe', 'ram_mb': 212.3}, {'pid': 6612, 'nombre': 'opera.exe', 'ram_mb': 207.6}, {'pid': 8752, 'nombre': 'opera.exe', 'ram_mb': 204.9}, {'pid': 12132, 'nombre': 'Code.exe', 'ram_mb': 198.8}, {'pid': 12444, 'nombre': 'RobloxPlayerBeta.exe', 'ram_mb': 158.6}, {'pid': 8828, 'nombre': 'explorer.exe', 'ram_mb': 155.4}, {'pid': 8380, 'nombre': 'opera.exe', 'ram_mb': 148.2}, {'pid': 3164, 'nombre': 'fdm.exe', 'ram_mb': 126.5}, {'pid': 4228, 'nombre': 'WhatsApp.Root.exe', 'ram_mb': 121.2}, {'pid': 16604, 'nombre': 'Code.exe', 'ram_mb': 119.6}, {'pid': 11360, 'nombre': 'msedge.exe', 'ram_mb': 107.6}, {'pid': 11072, 'nombre': 'Code.exe', 'ram_mb': 100.0}, {'pid': 1380, 'nombre': 'DSAService.exe', 'ram_mb': 94.2}, {'pid': 13232, 'nombre': 'Code.exe', 'ram_mb': 92.1}, {'pid': 13712, 'nombre': 'Code.exe', 'ram_mb': 91.9}, {'pid': 7568, 'nombre': 'Code.exe', 'ram_mb': 90.0}, {'pid': 8236, 'nombre': 'SearchApp.exe', 'ram_mb': 85.6}, {'pid': 124, 'nombre': 'Registry', 'ram_mb': 85.4}]",
+    "correcto": true,
+    "error": null
+  },
+  {
+    "fecha": "2026-09-12T00:09:04.846609",
+    "objetivo": "muestra mis procesos",
+    "herramienta": "listar_procesos",
+    "argumentos": {},
+    "resultado": "[{'pid': 14476, 'nombre': 'llama-server.exe', 'ram_mb': 5430.3}, {'pid': 15564, 'nombre': 'opera.exe', 'ram_mb': 462.7}, {'pid': 10980, 'nombre': 'opera.exe', 'ram_mb': 457.9}, {'pid': 11960, 'nombre': 'opera.exe', 'ram_mb': 433.9}, {'pid': 16524, 'nombre': 'opera.exe', 'ram_mb': 321.7}, {'pid': 3200, 'nombre': 'opera.exe', 'ram_mb': 321.4}, {'pid': 4092, 'nombre': 'MemCompression', 'ram_mb': 277.3}, {'pid': 532, 'nombre': 'MsMpEng.exe', 'ram_mb': 245.5}, {'pid': 9564, 'nombre': 'Code.exe', 'ram_mb': 217.2}, {'pid': 8932, 'nombre': 'opera.exe', 'ram_mb': 200.2}, {'pid': 6256, 'nombre': 'opera.exe', 'ram_mb': 171.6}, {'pid': 6612, 'nombre': 'opera.exe', 'ram_mb': 160.1}, {'pid': 10852, 'nombre': 'Code.exe', 'ram_mb': 155.9}, {'pid': 8752, 'nombre': 'opera.exe', 'ram_mb': 155.0}, {'pid': 6572, 'nombre': 'msedge.exe', 'ram_mb': 147.8}, {'pid': 12444, 'nombre': 'RobloxPlayerBeta.exe', 'ram_mb': 145.7}, {'pid': 8380, 'nombre': 'opera.exe', 'ram_mb': 138.8}, {'pid': 12132, 'nombre': 'Code.exe', 'ram_mb': 125.7}, {'pid': 3164, 'nombre': 'fdm.exe', 'ram_mb': 96.2}, {'pid': 8828, 'nombre': 'explorer.exe', 'ram_mb': 88.0}, {'pid': 16604, 'nombre': 'Code.exe', 'ram_mb': 67.4}, {'pid': 4228, 'nombre': 'WhatsApp.Root.exe', 'ram_mb': 61.5}, {'pid': 1836, 'nombre': 'powershell.exe', 'ram_mb': 54.6}, {'pid': 9884, 'nombre': 'Code.exe', 'ram_mb': 53.5}, {'pid': 8776, 'nombre': 'svchost.exe', 'ram_mb': 50.7}, {'pid': 1380, 'nombre': 'DSAService.exe', 'ram_mb': 50.0}, {'pid': 11072, 'nombre': 'Code.exe', 'ram_mb': 45.4}, {'pid': 4472, 'nombre': 'msedge.exe', 'ram_mb': 38.7}, {'pid': 11420, 'nombre': 'opera.exe', 'ram_mb': 36.9}, {'pid': 4, 'nombre': 'System', 'ram_mb': 36.5}, {'pid': 9732, 'nombre': 'esrv_svc.exe', 'ram_mb': 35.3}, {'pid': 10756, 'nombre': 'EpicGamesLauncher.exe', 'ram_mb': 34.6}, {'pid': 13668, 'nombre': 'StartMenuExperienceHost.exe', 'ram_mb': 34.0}, {'pid': 5736, 'nombre': 'dwm.exe', 'ram_mb': 33.8}, {'pid': 7048, 'nombre': 'python.exe', 'ram_mb': 32.0}, {'pid': 13184, 'nombre': 'ollama.exe', 'ram_mb': 31.4}, {'pid': 7568, 'nombre': 'Code.exe', 'ram_mb': 31.3}, {'pid': 6912, 'nombre': 'svchost.exe', 'ram_mb': 30.6}, {'pid': 13232, 'nombre': 'Code.exe', 'ram_mb': 30.5}, {'pid': 8140, 'nombre': 'EpicOnlineServicesUserHelper.exe', 'ram_mb': 29.0}, {'pid': 5392, 'nombre': 'MoUsoCoreWorker.exe', 'ram_mb': 28.0}, {'pid': 13644, 'nombre': 'backgroundTaskHost.exe', 'ram_mb': 27.7}, {'pid': 17048, 'nombre': 'svchost.exe', 'ram_mb': 27.3}, {'pid': 14808, 'nombre': 'msedge.exe', 'ram_mb': 27.1}, {'pid': 7420, 'nombre': 'svchost.exe', 'ram_mb': 26.8}, {'pid': 5548, 'nombre': 'gamingservices.exe', 'ram_mb': 26.3}, {'pid': 2952, 'nombre': 'svchost.exe', 'ram_mb': 25.3}, {'pid': 2964, 'nombre': 'svchost.exe', 'ram_mb': 24.2}, {'pid': 6128, 'nombre': 'svchost.exe', 'ram_mb': 23.5}, {'pid': 124, 'nombre': 'Registry', 'ram_mb': 22.1}, {'pid': 4240, 'nombre': 'warp-svc.exe', 'ram_mb': 20.5}, {'pid': 16908, 'nombre': 'Code.exe', 'ram_mb': 20.1}, {'pid': 1760, 'nombre': 'sihost.exe', 'ram_mb': 20.0}, {'pid': 1000, 'nombre': 'svchost.exe', 'ram_mb': 19.4}, {'pid': 7208, 'nombre': 'esrv.exe', 'ram_mb': 19.2}, {'pid': 3096, 'nombre': 'msedge.exe', 'ram_mb': 19.1}, {'pid': 2384, 'nombre': 'svchost.exe', 'ram_mb': 17.6}, {'pid': 7088, 'nombre': 'svchost.exe', 'ram_mb': 17.3}, {'pid': 8884, 'nombre': 'svchost.exe', 'ram_mb': 16.8}, {'pid': 11688, 'nombre': 'svchost.exe', 'ram_mb': 16.2}, {'pid': 6504, 'nombre': 'svchost.exe', 'ram_mb': 16.0}, {'pid': 2256, 'nombre': 'DSAUpdateService.exe', 'ram_mb': 15.9}, {'pid': 2356, 'nombre': 'EpicWebHelper.exe', 'ram_mb': 15.4}, {'pid': 2708, 'nombre': 'svchost.exe', 'ram_mb': 15.1}, {'pid': 9920, 'nombre': 'RuntimeBroker.exe', 'ram_mb': 15.0}, {'pid': 696, 'nombre': 'svchost.exe', 'ram_mb': 14.6}, {'pid': 5592, 'nombre': 'SearchIndexer.exe', 'ram_mb': 13.8}, {'pid': 1224, 'nombre': 'svchost.exe', 'ram_mb': 13.4}, {'pid': 12876, 'nombre': 'EpicWebHelper.exe', 'ram_mb': 13.4}, {'pid': 2996, 'nombre': 'svchost.exe', 'ram_mb': 13.2}, {'pid': 788, 'nombre': 'lsass.exe', 'ram_mb': 13.0}, {'pid': 8128, 'nombre': 'svchost.exe', 'ram_mb': 12.4}, {'pid': 8976, 'nombre': 'opera.exe', 'ram_mb': 12.3}, {'pid': 15072, 'nombre': 'ollama app.exe', 'ram_mb': 12.3}, {'pid': 2560, 'nombre': 'spoolsv.exe', 'ram_mb': 11.8}, {'pid': 8560, 'nombre': 'svchost.exe', 'ram_mb': 11.7}, {'pid': 13020, 'nombre': 'msedge.exe', 'ram_mb': 11.7}, {'pid': 11524, 'nombre': 'TextInputHost.exe', 'ram_mb': 11.6}, {'pid': 3112, 'nombre': 'OfficeClickToRun.exe', 'ram_mb': 11.4}, {'pid': 7976, 'nombre': 'svchost.exe', 'ram_mb': 11.2}, {'pid': 3048, 'nombre': 'SurSvc.exe', 'ram_mb': 11.0}, {'pid': 8544, 'nombre': 'dllhost.exe', 'ram_mb': 11.0}, {'pid': 12848, 'nombre': 'conhost.exe', 'ram_mb': 10.6}, {'pid': 2988, 'nombre': 'svchost.exe', 'ram_mb': 10.5}, {'pid': 9992, 'nombre': 'WmiPrvSE.exe', 'ram_mb': 10.3}, {'pid': 12736, 'nombre': 'dasHost.exe', 'ram_mb': 9.9}, {'pid': 13712, 'nombre': 'Code.exe', 'ram_mb': 9.9}, {'pid': 9116, 'nombre': 'svchost.exe', 'ram_mb': 9.8}, {'pid': 8236, 'nombre': 'SearchApp.exe', 'ram_mb': 9.7}, {'pid': 3004, 'nombre': 'svchost.exe', 'ram_mb': 9.6}, {'pid': 13944, 'nombre': 'taskhostw.exe', 'ram_mb': 9.6}, {'pid': 1700, 'nombre': 'svchost.exe', 'ram_mb': 9.5}, {'pid': 4536, 'nombre': 'svchost.exe', 'ram_mb': 9.0}, {'pid': 12492, 'nombre': 'audiodg.exe', 'ram_mb': 9.0}, {'pid': 8808, 'nombre': 'powershell.exe', 'ram_mb': 8.9}, {'pid': 1944, 'nombre': 'svchost.exe', 'ram_mb': 8.8}, {'pid': 15452, 'nombre': 'smartscreen.exe', 'ram_mb': 8.8}, {'pid': 9852, 'nombre': 'SecurityHealthService.exe', 'ram_mb': 8.7}, {'pid': 728, 'nombre': 'svchost.exe', 'ram_mb': 8.6}, {'pid': 10164, 'nombre': 'RuntimeBroker.exe', 'ram_mb': 8.6}]",
+    "correcto": true,
+    "error": null
+  },
+  {
+    "fecha": "2026-09-12T00:11:26.935637",
+    "objetivo": "abre una aplicacion que no existe llamada JARVIS_ALPHA_FINAL_RETRY_999",
+    "herramienta": "buscar_app",
+    "argumentos": {
+      "nombre": "JARVIS_ALPHA_FINAL_RETRY_999"
+    },
+    "resultado": "None",
+    "correcto": false,
+    "error": "None"
+  },
+  {
+    "fecha": "2026-09-12T00:24:27.694592",
+    "objetivo": "abre una aplicacion que no existe llamada JARVIS_ALPHA_BOM_TEST_999",
+    "herramienta": "buscar_app",
+    "argumentos": {
+      "nombre": "JARVIS_ALPHA_BOM_TEST_999"
+    },
+    "resultado": "None",
+    "correcto": false,
+    "error": "None"
+  },
+  {
+    "fecha": "2026-09-12T10:27:09.676849",
+    "objetivo": "abre una aplicacion que no existe llamada JARVIS_PLAN_VACIO_TEST_999",
+    "herramienta": "listar_apps",
+    "argumentos": {},
+    "resultado": "[{'name': 'curseforge', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\CurseForge.lnk', 'type': '.lnk'}, {'name': 'discord', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Discord.lnk', 'type': '.lnk'}, {'name': 'gta5', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\GTA5.lnk', 'type': '.lnk'}, {'name': 'navegador opera gx', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Navegador Opera GX.lnk', 'type': '.lnk'}, {'name': 'ollama', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Ollama.lnk', 'type': '.lnk'}, {'name': 'roblox', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Roblox.lnk', 'type': '.lnk'}, {'name': 'visual studio code', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Visual Studio Code.lnk', 'type': '.lnk'}, {'name': 'magnify', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Accessibility\\\\Magnify.lnk', 'type': '.lnk'}, {'name': 'narrator', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Accessibility\\\\Narrator.lnk', 'type': '.lnk'}, {'name': 'on-screen keyboard', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Accessibility\\\\On-Screen Keyboard.lnk', 'type': '.lnk'}, {'name': 'internet explorer', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Accessories\\\\Internet Explorer.lnk', 'type': '.lnk'}, {'name': 'capcut', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\CapCut\\\\CapCut.lnk', 'type': '.lnk'}, {'name': 'software fix', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Lenovo\\\\Software Fix.lnk', 'type': '.lnk'}, {'name': 'uninstall software fix', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Lenovo\\\\Uninstall Software Fix.lnk', 'type': '.lnk'}, {'name': 'msi afterburner', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\MSI Afterburner\\\\MSI Afterburner.lnk', 'type': '.lnk'}, {'name': 'readme', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\MSI Afterburner\\\\ReadMe.lnk', 'type': '.lnk'}, {'name': 'uninstall', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\MSI Afterburner\\\\Uninstall.lnk', 'type': '.lnk'}, {'name': 'idle (python 3.12 64-bit)', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Python 3.12\\\\IDLE (Python 3.12 64-bit).lnk', 'type': '.lnk'}, {'name': 'python 3.12 (64-bit)', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Python 3.12\\\\Python 3.12 (64-bit).lnk', 'type': '.lnk'}, {'name': 'python 3.12 manuals (64-bit)', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Python 3.12\\\\Python 3.12 Manuals (64-bit).lnk', 'type': '.lnk'}, {'name': 'python 3.12 module docs (64-bit)', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Python 3.12\\\\Python 3.12 Module Docs (64-bit).lnk', 'type': '.lnk'}, {'name': 'idle (python 3.13 64-bit)', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Python 3.13\\\\IDLE (Python 3.13 64-bit).lnk', 'type': '.lnk'}, {'name': 'python 3.13 (64-bit)', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Python 3.13\\\\Python 3.13 (64-bit).lnk', 'type': '.lnk'}, {'name': 'python 3.13 manuals (64-bit)', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Python 3.13\\\\Python 3.13 Manuals (64-bit).lnk', 'type': '.lnk'}, {'name': 'python 3.13 module docs (64-bit)', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Python 3.13\\\\Python 3.13 Module Docs (64-bit).lnk', 'type': '.lnk'}, {'name': 'desktop overlay host', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\RivaTuner Statistics Server\\\\Desktop Overlay Host.lnk', 'type': '.lnk'}, {'name': 'rivatuner statistics server', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\RivaTuner Statistics Server\\\\RivaTuner Statistics Server.lnk', 'type': '.lnk'}, {'name': 'roblox player', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Roblox\\\\Roblox Player.lnk', 'type': '.lnk'}, {'name': 'roblox studio', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Roblox\\\\Roblox Studio.lnk', 'type': '.lnk'}, {'name': 'steam', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Steam\\\\Steam.lnk', 'type': '.lnk'}, {'name': 'administrative tools', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\System Tools\\\\Administrative Tools.lnk', 'type': '.lnk'}, {'name': 'command prompt', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\System Tools\\\\Command Prompt.lnk', 'type': '.lnk'}, {'name': 'computer', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\System Tools\\\\computer.lnk', 'type': '.lnk'}, {'name': 'control panel', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\System Tools\\\\Control Panel.lnk', 'type': '.lnk'}, {'name': 'file explorer', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\System Tools\\\\File Explorer.lnk', 'type': '.lnk'}, {'name': 'run', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\System Tools\\\\Run.lnk', 'type': '.lnk'}, {'name': 'windows powershell (x86)', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Windows PowerShell\\\\Windows PowerShell (x86).lnk', 'type': '.lnk'}, {'name': 'windows powershell', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Windows PowerShell\\\\Windows PowerShell.lnk', 'type': '.lnk'}, {'name': 'ayuda winrar', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\WinRAR\\\\Ayuda WinRAR.lnk', 'type': '.lnk'}, {'name': 'manual rar para consola', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\WinRAR\\\\Manual RAR para consola.lnk', 'type': '.lnk'}, {'name': 'que hay de nuevo en la última versión', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\WinRAR\\\\Que hay de nuevo en la última versión.lnk', 'type': '.lnk'}, {'name': 'winrar', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\WinRAR\\\\WinRAR.lnk', 'type': '.lnk'}, {'name': 'msi afterburner localization reference', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\MSI Afterburner\\\\SDK\\\\MSI Afterburner localization reference.lnk', 'type': '.lnk'}, {'name': 'msi afterburner skin format reference', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\MSI Afterburner\\\\SDK\\\\MSI Afterburner skin format reference.lnk', 'type': '.lnk'}, {'name': 'samples', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\MSI Afterburner\\\\SDK\\\\Samples.lnk', 'type': '.lnk'}, {'name': 'rivatuner statistics server localization reference', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\RivaTuner Statistics Server\\\\SDK\\\\RivaTuner Statistics Server localization reference.lnk', 'type': '.lnk'}, {'name': 'rivatuner statistics server skin format reference', 'path': 'C:\\\\Users\\\\marti\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\RivaTuner Statistics Server\\\\SDK\\\\RivaTuner Statistics Server skin format reference.lnk', 'type': '.lnk'}, {'name': 'access', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Access.lnk', 'type': '.lnk'}, {'name': 'epic games launcher', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Epic Games Launcher.lnk', 'type': '.lnk'}, {'name': 'excel', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Excel.lnk', 'type': '.lnk'}, {'name': 'google drive', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Google Drive.lnk', 'type': '.lnk'}, {'name': 'immersive control panel', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Immersive Control Panel.lnk', 'type': '.lnk'}, {'name': 'intel driver & support assistant', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Intel Driver & Support Assistant.lnk', 'type': '.lnk'}, {'name': 'microsoft edge', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Microsoft Edge.lnk', 'type': '.lnk'}, {'name': 'onenote', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\OneNote.lnk', 'type': '.lnk'}, {'name': 'outlook (classic)', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Outlook (classic).lnk', 'type': '.lnk'}, {'name': 'powerpoint', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\PowerPoint.lnk', 'type': '.lnk'}, {'name': 'publisher', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Publisher.lnk', 'type': '.lnk'}, {'name': 'skype empresarial', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Skype Empresarial.lnk', 'type': '.lnk'}, {'name': 'spacedesk driver console', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\spacedesk DRIVER Console.lnk', 'type': '.lnk'}, {'name': 'sticky notes (new)', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Sticky Notes (new).lnk', 'type': '.lnk'}, {'name': 'word', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Word.lnk', 'type': '.lnk'}, {'name': 'speech recognition', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Accessibility\\\\Speech Recognition.lnk', 'type': '.lnk'}, {'name': 'math input panel', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Accessories\\\\Math Input Panel.lnk', 'type': '.lnk'}, {'name': 'notepad', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Accessories\\\\Notepad.lnk', 'type': '.lnk'}, {'name': 'paint', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Accessories\\\\Paint.lnk', 'type': '.lnk'}, {'name': 'quick assist', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Accessories\\\\Quick Assist.lnk', 'type': '.lnk'}, {'name': 'remote desktop connection', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Accessories\\\\Remote Desktop Connection.lnk', 'type': '.lnk'}, {'name': 'snipping tool', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Accessories\\\\Snipping Tool.lnk', 'type': '.lnk'}, {'name': 'steps recorder', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Accessories\\\\Steps Recorder.lnk', 'type': '.lnk'}, {'name': 'windows fax and scan', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Accessories\\\\Windows Fax and Scan.lnk', 'type': '.lnk'}, {'name': 'windows media player', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Accessories\\\\Windows Media Player.lnk', 'type': '.lnk'}, {'name': 'wordpad', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Accessories\\\\Wordpad.lnk', 'type': '.lnk'}, {'name': 'component services', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Administrative Tools\\\\Component Services.lnk', 'type': '.lnk'}, {'name': 'computer management', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Administrative Tools\\\\Computer Management.lnk', 'type': '.lnk'}, {'name': 'dfrgui', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Administrative Tools\\\\dfrgui.lnk', 'type': '.lnk'}, {'name': 'disk cleanup', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Administrative Tools\\\\Disk Cleanup.lnk', 'type': '.lnk'}, {'name': 'event viewer', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Administrative Tools\\\\Event Viewer.lnk', 'type': '.lnk'}, {'name': 'iscsi initiator', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Administrative Tools\\\\iSCSI Initiator.lnk', 'type': '.lnk'}, {'name': 'memory diagnostics tool', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Administrative Tools\\\\Memory Diagnostics Tool.lnk', 'type': '.lnk'}, {'name': 'odbc data sources (32-bit)', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Administrative Tools\\\\ODBC Data Sources (32-bit).lnk', 'type': '.lnk'}, {'name': 'odbc data sources (64-bit)', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Administrative Tools\\\\ODBC Data Sources (64-bit).lnk', 'type': '.lnk'}, {'name': 'performance monitor', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Administrative Tools\\\\Performance Monitor.lnk', 'type': '.lnk'}, {'name': 'recoverydrive', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Administrative Tools\\\\RecoveryDrive.lnk', 'type': '.lnk'}, {'name': 'registry editor', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Administrative Tools\\\\Registry Editor.lnk', 'type': '.lnk'}, {'name': 'resource monitor', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Administrative Tools\\\\Resource Monitor.lnk', 'type': '.lnk'}, {'name': 'services', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Administrative Tools\\\\services.lnk', 'type': '.lnk'}, {'name': 'system configuration', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Administrative Tools\\\\System Configuration.lnk', 'type': '.lnk'}, {'name': 'system information', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Administrative Tools\\\\System Information.lnk', 'type': '.lnk'}, {'name': 'task scheduler', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Administrative Tools\\\\Task Scheduler.lnk', 'type': '.lnk'}, {'name': 'windows defender firewall with advanced security', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Administrative Tools\\\\Windows Defender Firewall with Advanced Security.lnk', 'type': '.lnk'}, {'name': 'brother utilities', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Brother\\\\Brother Utilities.lnk', 'type': '.lnk'}, {'name': 'cloudflare warp', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Cloudflare\\\\Cloudflare WARP.lnk', 'type': '.lnk'}, {'name': 'desinstalar free download manager', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Free Download Manager\\\\Desinstalar Free Download Manager.lnk', 'type': '.lnk'}, {'name': 'free download manager', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Free Download Manager\\\\Free Download Manager.lnk', 'type': '.lnk'}, {'name': 'git bash', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Git\\\\Git Bash.lnk', 'type': '.lnk'}, {'name': 'git cmd', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Git\\\\Git CMD.lnk', 'type': '.lnk'}, {'name': 'git gui', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Git\\\\Git GUI.lnk', 'type': '.lnk'}, {'name': 'git release notes', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Git\\\\Git Release Notes.lnk', 'type': '.lnk'}, {'name': 'administrador de grabaciones de skype empresarial', 'path': 'C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Herramientas de Microsoft Office\\\\Administrador de grabaciones de Skype Empresarial.lnk', 'type': '.lnk'}]",
+    "correcto": true,
+    "error": null
+  }
+]

@@ -1,7 +1,7 @@
+﻿"""
+MÃ³dulo de anÃ¡lisis de imÃ¡genes para JARVIS usando LLaVA (Ollama)
 """
-Módulo de análisis de imágenes para JARVIS usando LLaVA (Ollama)
-"""
-import re, os, base64, glob, subprocess
+import re, os, base64, glob, subprocess, unicodedata
 import requests
 
 OLLAMA_URL = "http://localhost:11434/api/generate"
@@ -18,10 +18,10 @@ def _imagen_a_base64(ruta):
         return base64.b64encode(f.read()).decode('utf-8')
 
 
-def _analizar_imagen(ruta_imagen, pregunta="¿Qué hay en esta imagen?"):
-    """Envía la imagen a LLaVA y devuelve la descripción."""
+def _analizar_imagen(ruta_imagen, pregunta="Â¿QuÃ© hay en esta imagen?"):
+    """EnvÃ­a la imagen a LLaVA y devuelve la descripciÃ³n."""
     if not os.path.exists(ruta_imagen):
-        return f"No encontré la imagen en {ruta_imagen}"
+        return f"No encontrÃ© la imagen en {ruta_imagen}"
 
     try:
         img_b64 = _imagen_a_base64(ruta_imagen)
@@ -30,7 +30,7 @@ def _analizar_imagen(ruta_imagen, pregunta="¿Qué hay en esta imagen?"):
             "prompt": f"Look at this image and answer in SPANISH, briefly and clearly. Question: {pregunta}",
             "images": [img_b64],
             "stream": False
-        }, timeout=120)
+        }, timeout=300)
         respuesta = r.json().get("response", "").strip()
         return respuesta if respuesta else "No pude analizar la imagen."
     except Exception as e:
@@ -75,7 +75,7 @@ def imagen_del_portapapeles():
 
 
 def ultima_captura():
-    """Encuentra la captura de pantalla más reciente."""
+    """Encuentra la captura de pantalla mÃ¡s reciente."""
     carpetas = [CAPTURAS_DIR, ESCRITORIO,
                 os.path.expandvars(r"%USERPROFILE%\Pictures")]
     imagenes = []
@@ -85,11 +85,11 @@ def ultima_captura():
                 imagenes.extend(glob.glob(os.path.join(carpeta, ext)))
     if not imagenes:
         return None
-    # La más reciente por fecha de modificación
+    # La mÃ¡s reciente por fecha de modificaciÃ³n
     return max(imagenes, key=os.path.getmtime)
 
 
-def analizar(modo, pregunta="¿Qué hay en esta imagen?"):
+def analizar(modo, pregunta="Â¿QuÃ© hay en esta imagen?"):
     """
     modo: 'pantalla', 'portapapeles', 'ultima'
     """
@@ -104,22 +104,22 @@ def analizar(modo, pregunta="¿Qué hay en esta imagen?"):
     elif modo == 'ultima':
         ruta = ultima_captura()
         if not ruta:
-            return "No encontré ninguna captura reciente."
+            return "No encontrÃ© ninguna captura reciente."
     else:
-        return "Modo de análisis no reconocido."
+        return "Modo de anÃ¡lisis no reconocido."
 
     return _analizar_imagen(ruta, pregunta)
 
 
 def detectar_vision(texto):
     """
-    Detecta peticiones de análisis de imagen.
+    Detecta peticiones de anÃ¡lisis de imagen.
     Devuelve (modo, pregunta) o None.
     """
-    t = texto.lower().strip()
+    t = unicodedata.normalize("NFKD", texto.lower()).encode("ascii", "ignore").decode("ascii").strip()
 
-    PALABRAS_VISION = ['analiza', 'analizar', 'qué ves', 'que ves', 'qué hay en',
-                       'que hay en', 'describe', 'mira', 'qué es esto', 'que es esto',
+    PALABRAS_VISION = ['analiza', 'analizar', 'quÃ© ves', 'que ves', 'quÃ© hay en',
+                       'que hay en', 'describe', 'mira', 'quÃ© es esto', 'que es esto',
                        'lee la imagen', 'lee esta imagen']
 
     es_vision = any(p in t for p in PALABRAS_VISION)
@@ -132,20 +132,22 @@ def detectar_vision(texto):
     # Determinar modo
     if any(p in t for p in ['pantalla', 'screen', 'mi pantalla', 'lo que veo']):
         modo = 'pantalla'
-    elif any(p in t for p in ['portapapeles', 'copiado', 'clipboard', 'lo que copié']):
+    elif any(p in t for p in ['portapapeles', 'copiado', 'clipboard', 'lo que copiÃ©']):
         modo = 'portapapeles'
-    elif any(p in t for p in ['última', 'ultima', 'reciente', 'captura']):
+    elif any(p in t for p in ['Ãºltima', 'ultima', 'reciente', 'captura']):
         modo = 'ultima'
     else:
         # Por defecto, captura de pantalla
         modo = 'pantalla'
 
-    # Extraer pregunta específica si la hay
-    pregunta = "¿Qué hay en esta imagen?"
-    m = re.search(r'(?:qué|que|cuántos?|cuantos?|dónde|donde|cómo|como|hay)\s+(.+)', t)
+    # Extraer pregunta especÃ­fica si la hay
+    pregunta = "Â¿QuÃ© hay en esta imagen?"
+    m = re.search(r'(?:quÃ©|que|cuÃ¡ntos?|cuantos?|dÃ³nde|donde|cÃ³mo|como|hay)\s+(.+)', t)
     if m:
         posible = m.group(1).strip()
         if len(posible) > 5 and 'imagen' not in posible[:10]:
             pregunta = texto.strip()
 
     return (modo, pregunta)
+
+

@@ -1,0 +1,70 @@
+{
+  "qué es una pizza": {
+    "pregunta": "¿Qué es una pizza?",
+    "respuesta": "La pizza es una de las comidas más populares del mundo.",
+    "fuentes": [
+      {
+        "titulo": "Pizza - Wikipedia, la enciclopedia libre",
+        "texto": "3 weeks ago - \"Pizza a la piedra vs. pizza al molde: dos estilos que dividen a los argentinos\". Clarín (in Spanish). Archived from the original on December 11, 2022. Retrieved December 10, 2022. ↑ Firpo, Hernán (October 20, 2018). \"Angelín cumple 80 años: mitos y verdades de una pizzería indispensable\".",
+        "url": "https://en.wikipedia.org/wiki/Pizza"
+      },
+      {
+        "titulo": "Pizza - Wikipedia",
+        "texto": "May 25, 2026 - The most characteristic style of Argentine pizza—which almost all the classic pizzerias in Buenos Aires specialize in—is the so-called pizza de molde (Spanish for 'pizza in the pan'), characterized by having a \"thick, spongy base and elevated bready crust\".[74] This style, which today [when?] is identified as the typical style of Argentine pizza—characterized by a thick crust and a large amount of cheese—arose when impoverished Italian immigrants found a greater abundance of food in then-prosperous Argentina, which motivated them to transform the originally modest dish into a much more",
+        "url": "https://translate.google.com/translate?u=https://en.wikipedia.org/wiki/Pizza&hl=es&sl=en&tl=es&client=srp"
+      },
+      {
+        "titulo": "Historia de la pizza - Wikipedia, la enciclopedia libre",
+        "texto": "June 8, 2026 - Panes similares existen fuera del área del mediterráneo, entre ellos se encuentra el indio \"paratha\" y el alemán \"flammkuchen\". La existencia de estas variantes locales ha hecho que la denominación de la «pizza» haya quedado diluida en una infinidad de variantes regionales.",
+        "url": "https://es.wikipedia.org/wiki/Historia_de_la_pizza"
+      },
+      {
+        "titulo": "Pizza: origen e historia, tipos y recetas",
+        "texto": "November 22, 2023 - ... La pizza es una masa circular o rectangular, con queso o salsa de tomate, pepperoni o alcachofas, que gusta de jugar al contraste: ácido, dulce, blando, crujiente, salado, jugoso.",
+        "url": "https://bonviveur.com/es/noticias/pizza"
+      },
+      {
+        "titulo": "Pizza - Qué es, en el hogar, definición y concepto",
+        "texto": "December 6, 2023 - La pizza es una de las comidas más populares del mundo. Sus orígenes se encuentran en Italia, sobre todo en la región de Nápoles, donde comenzó a prepararse la versión moderna de este plato.",
+        "url": "https://definicion.de/pizza/"
+      }
+    ],
+    "concepto": "Qué es una pizza",
+    "fecha_aprendizaje": "2026-08-24T20:43:42",
+    "confianza": 0.9
+  },
+  "qué es una lasaña": {
+    "concepto": "Qué es una lasaña",
+    "pregunta": "¿Qué es una lasaña?",
+    "respuesta": "La palabra singular en italiano es lasagna y en plural lasagne; y se aplica indistintamente al plato o a la pasta en forma de láminas.",
+    "fuentes": [
+      {
+        "titulo": "Lasaña - Wikipedia, la enciclopedia libre",
+        "texto": "2 weeks ago - La palabra «lasaña» proviene del griego antiguo lasanon, a través del latín lasănum, que se refiere al pote en el que se cocinaba. La palabra singular en italiano es lasagna y en plural lasagne; y se aplica indistintamente al plato o a la pasta en forma de láminas. Es una entrada o primer ...",
+        "url": "https://es.wikipedia.org/wiki/Lasaña"
+      },
+      {
+        "titulo": "Origen de la lasaña: Ingredientes, variedades y etimología",
+        "texto": "May 27, 2025 - Una lasaña común está formada por las placas de pasta, tomate, carne, verduras, salsa bechamel y queso para gratinar. Esta sería la base pero, como siempre, hay mil y una variedades.",
+        "url": "https://lamafia.es/blog/origen-la-lasagna/"
+      },
+      {
+        "titulo": "Origen de la lasaña y tipos de lasañas. ¿Lo sabías? | La Cocinera",
+        "texto": "August 7, 2022 - Con una historia de varios siglos a sus espaldas, el origen de la lasaña es en realidad, el origen de diferentes tipos de lasañas. El término lasaña proviene del griego “lasanon”, que a su vez procede del latín “lasanum”, los cuales hacían referencia al recipiente donde se cocinaba este tipo de pasta en láminas.",
+        "url": "https://www.lacocinera.es/cocina-facil/faq/lasana-origen-tipos-lasana"
+      },
+      {
+        "titulo": "lasaña | Diccionario panhispánico de dudas | RAE - ASALE",
+        "texto": "1. Adaptación gráfica de la voz italiana lasagna, 'plato compuesto de capas de pasta en las que se intercala carne picada u otros ingredientes mezclados con besamel': «Terminó gustoso su lasaña» (Serrano Vida cl 1995).",
+        "url": "https://www.rae.es/dpd/lasaña"
+      },
+      {
+        "titulo": "Definición de Lasaña",
+        "texto": "La lasaña es un plato típico de la cocina italiana que se elabora a partir de finas láminas de pasta que son rellenadas con carne, tomate, verduras, cebollas y normalmente son cocinadas con aceite de oliva.",
+        "url": "https://significado.com/lasana/"
+      }
+    ],
+    "fecha_aprendizaje": "2026-08-24T22:50:54",
+    "confianza": 0.9
+  }
+}

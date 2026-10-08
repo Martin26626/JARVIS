@@ -1,5 +1,5 @@
-"""
-Módulo para explorar carpetas de cualquier disco desde JARVIS / Telegram
+﻿"""
+MÃ³dulo para explorar carpetas de cualquier disco desde JARVIS / Telegram
 """
 import os
 import re
@@ -9,28 +9,28 @@ CARPETAS_CONOCIDAS = {
     'escritorio': os.path.expandvars(r"%USERPROFILE%\Desktop"),
     'descargas': os.path.expandvars(r"%USERPROFILE%\Downloads"),
     'documentos': os.path.expandvars(r"%USERPROFILE%\Documents"),
-    'imágenes': os.path.expandvars(r"%USERPROFILE%\Pictures"),
+    'imÃ¡genes': os.path.expandvars(r"%USERPROFILE%\Pictures"),
     'imagenes': os.path.expandvars(r"%USERPROFILE%\Pictures"),
-    'música': os.path.expandvars(r"%USERPROFILE%\Music"),
+    'mÃºsica': os.path.expandvars(r"%USERPROFILE%\Music"),
     'musica': os.path.expandvars(r"%USERPROFILE%\Music"),
-    'vídeos': os.path.expandvars(r"%USERPROFILE%\Videos"),
+    'vÃ­deos': os.path.expandvars(r"%USERPROFILE%\Videos"),
     'videos': os.path.expandvars(r"%USERPROFILE%\Videos"),
 }
 
 # Discos donde buscar carpetas por nombre
 DISCOS = ['C:\\', 'D:\\', 'E:\\', 'F:\\', 'G:\\']
 
-# Carpetas del sistema que se saltan en la búsqueda profunda (lentas e irrelevantes)
+# Carpetas del sistema que se saltan en la bÃºsqueda profunda (lentas e irrelevantes)
 SALTAR = {'windows', 'program files', 'program files (x86)', 'programdata',
           '$recycle.bin', 'system volume information', 'windowsapps', 'appdata',
           'node_modules', '.git', 'recovery', 'perflogs', 'msocache', 'intel',
           'nvidia', 'amd', '$windows.~bt', '$windows.~ws', 'config.msi',
           'documents and settings', 'onedrivetemp', '.cache'}
 
-# Máxima profundidad de búsqueda recursiva
+# MÃ¡xima profundidad de bÃºsqueda recursiva
 MAX_PROFUNDIDAD = 5
 
-# Última carpeta explorada (para "dime el contenido del archivo X")
+# Ãšltima carpeta explorada (para "dime el contenido del archivo X")
 _ultima_carpeta = None
 _ultimos_archivos = []
 
@@ -43,7 +43,7 @@ def _buscar_recursivo(nombre, exacto=True):
     for disco in DISCOS:
         if not os.path.isdir(disco):
             continue
-        # Recorrido por niveles con límite de profundidad
+        # Recorrido por niveles con lÃ­mite de profundidad
         pila = [(disco, 0)]
         while pila:
             actual, prof = pila.pop()
@@ -59,7 +59,7 @@ def _buscar_recursivo(nombre, exacto=True):
                             # Saltar carpetas del sistema
                             if nombre_dir in SALTAR or nombre_dir.startswith('$'):
                                 continue
-                            # ¿Coincide?
+                            # Â¿Coincide?
                             if exacto and nombre_dir == nombre:
                                 return entry.path
                             if not exacto and nombre in nombre_dir:
@@ -77,17 +77,17 @@ def _buscar_carpeta(nombre):
     """Busca una carpeta por nombre. Devuelve la ruta o None."""
     nombre = nombre.strip().lower()
 
-    # ¿Es una carpeta conocida? (rápido)
+    # Â¿Es una carpeta conocida? (rÃ¡pido)
     if nombre in CARPETAS_CONOCIDAS:
         ruta = CARPETAS_CONOCIDAS[nombre]
         if os.path.isdir(ruta):
             return ruta
 
-    # ¿Es una ruta directa? (ej "d:\mis-proyectos")
+    # Â¿Es una ruta directa? (ej "d:\mis-proyectos")
     if os.path.isdir(nombre):
         return nombre
 
-    # Búsqueda profunda: primero exacta, luego parcial
+    # BÃºsqueda profunda: primero exacta, luego parcial
     ruta = _buscar_recursivo(nombre, exacto=True)
     if ruta:
         return ruta
@@ -129,9 +129,9 @@ def buscar_archivo_global(nombre_archivo):
                 continue
 
     if not encontrados:
-        return f"No encontré ningún archivo llamado '{nombre_archivo}' en el PC."
+        return f"No encontrÃ© ningÃºn archivo llamado '{nombre_archivo}' en el PC."
 
-    # Guardar la carpeta del primer resultado para poder leerlo después
+    # Guardar la carpeta del primer resultado para poder leerlo despuÃ©s
     primero = encontrados[0]
     _ultima_carpeta = os.path.dirname(primero)
     try:
@@ -142,7 +142,7 @@ def buscar_archivo_global(nombre_archivo):
     if len(encontrados) == 1:
         return f"Encontrado: {primero}"
 
-    lineas = [f"Encontré {len(encontrados)} archivos:"]
+    lineas = [f"EncontrÃ© {len(encontrados)} archivos:"]
     for f in encontrados[:10]:
         lineas.append(f"  {f}")
     return "\n".join(lineas)
@@ -154,7 +154,7 @@ def listar_carpeta(nombre_carpeta):
 
     ruta = _buscar_carpeta(nombre_carpeta)
     if not ruta:
-        return f"No encontré la carpeta '{nombre_carpeta}' en ningún disco."
+        return f"No encontrÃ© la carpeta '{nombre_carpeta}' en ningÃºn disco."
 
     try:
         items = os.listdir(ruta)
@@ -162,7 +162,7 @@ def listar_carpeta(nombre_carpeta):
         return f"No pude abrir la carpeta: {e}"
 
     if not items:
-        return f"La carpeta {os.path.basename(ruta)} está vacía."
+        return f"La carpeta {os.path.basename(ruta)} estÃ¡ vacÃ­a."
 
     _ultima_carpeta = ruta
     _ultimos_archivos = items
@@ -181,21 +181,21 @@ def listar_carpeta(nombre_carpeta):
     if carpetas:
         lineas.append("Carpetas:")
         for c in carpetas[:30]:
-            lineas.append(f"  📁 {c}")
+            lineas.append(f"  ðŸ“ {c}")
     if archivos:
         lineas.append("\nArchivos:")
         for a in archivos[:50]:
-            lineas.append(f"  📄 {a}")
+            lineas.append(f"  ðŸ“„ {a}")
 
     total = len(carpetas) + len(archivos)
     if total > 80:
-        lineas.append(f"\n...y más ({total} en total)")
+        lineas.append(f"\n...y mÃ¡s ({total} en total)")
 
     return "\n".join(lineas)
 
 
 def _resolver_archivo(nombre_archivo):
-    """Encuentra un archivo en la última carpeta explorada."""
+    """Encuentra un archivo en la Ãºltima carpeta explorada."""
     if not _ultima_carpeta:
         return None
 
@@ -216,13 +216,13 @@ def _resolver_archivo(nombre_archivo):
 
 def leer_archivo_de_carpeta(nombre_archivo, accion='mostrar'):
     """
-    Lee/muestra/resume un archivo de la última carpeta explorada.
+    Lee/muestra/resume un archivo de la Ãºltima carpeta explorada.
     accion: 'mostrar' (contenido tal cual), 'leer' (igual), 'resumir' (con IA)
     """
     ruta = _resolver_archivo(nombre_archivo)
     if not ruta:
-        # Quizás no exploró carpeta antes; intentar como ruta directa
-        return (f"No encontré '{nombre_archivo}'. Primero dime la carpeta "
+        # QuizÃ¡s no explorÃ³ carpeta antes; intentar como ruta directa
+        return (f"No encontrÃ© '{nombre_archivo}'. Primero dime la carpeta "
                 f"(ej: 'abre la carpeta escritorio') y luego el archivo.")
 
     if not os.path.isfile(ruta):
@@ -231,7 +231,7 @@ def leer_archivo_de_carpeta(nombre_archivo, accion='mostrar'):
     ext = os.path.splitext(ruta)[1].lower()
     nombre = os.path.basename(ruta)
 
-    # Si quiere resumen, usar el módulo archivos (IA)
+    # Si quiere resumen, usar el mÃ³dulo archivos (IA)
     if accion == 'resumir':
         try:
             import archivos as _arch
@@ -249,13 +249,13 @@ def leer_archivo_de_carpeta(nombre_archivo, accion='mostrar'):
             import archivos as _arch
             contenido = _arch._leer_pdf(ruta)
         except:
-            return "Para PDF necesito el módulo de archivos."
+            return "Para PDF necesito el mÃ³dulo de archivos."
     elif ext == '.docx':
         try:
             import archivos as _arch
             contenido = _arch._leer_docx(ruta)
         except:
-            return "Para Word necesito el módulo de archivos."
+            return "Para Word necesito el mÃ³dulo de archivos."
     elif ext in EXT_LEGIBLE:
         try:
             with open(ruta, 'r', encoding='utf-8', errors='ignore') as f:
@@ -267,15 +267,15 @@ def leer_archivo_de_carpeta(nombre_archivo, accion='mostrar'):
         return f"{nombre} es un archivo {ext} ({tam} bytes). No puedo mostrar su contenido como texto."
 
     if not contenido.strip():
-        return f"{nombre} está vacío."
+        return f"{nombre} estÃ¡ vacÃ­o."
 
     # Devolver el contenido completo (el troceo para Telegram lo hace jarvis.py)
-    return f"📄 {nombre}:\n\n{contenido}"
+    return f"ðŸ“„ {nombre}:\n\n{contenido}"
 
 
 def borrar_archivo(nombre_archivo, carpeta=None):
     """Mueve un archivo a la papelera de Windows.
-    Si se da carpeta, busca ahí; si no, usa la última carpeta explorada."""
+    Si se da carpeta, busca ahÃ­; si no, usa la Ãºltima carpeta explorada."""
     global _ultima_carpeta, _ultimos_archivos
 
     ruta = None
@@ -284,7 +284,7 @@ def borrar_archivo(nombre_archivo, carpeta=None):
     if carpeta:
         carpeta_ruta = _buscar_carpeta(carpeta)
         if not carpeta_ruta:
-            return f"No encontré la carpeta '{carpeta}'."
+            return f"No encontrÃ© la carpeta '{carpeta}'."
         # Buscar el archivo dentro
         nombre = nombre_archivo.strip().lower()
         nombre_sin_ext = os.path.splitext(nombre)[0]
@@ -297,11 +297,11 @@ def borrar_archivo(nombre_archivo, carpeta=None):
         except Exception as e:
             return f"No pude acceder a la carpeta: {e}"
     else:
-        # Usar la última carpeta explorada
+        # Usar la Ãºltima carpeta explorada
         ruta = _resolver_archivo(nombre_archivo)
 
     if not ruta:
-        return (f"No encontré '{nombre_archivo}'. Dime la carpeta "
+        return (f"No encontrÃ© '{nombre_archivo}'. Dime la carpeta "
                 f"(ej: 'borra notas.txt de la carpeta escritorio').")
 
     if not os.path.isfile(ruta):
@@ -325,7 +325,7 @@ def borrar_archivo(nombre_archivo, carpeta=None):
 
 def detectar_explorador(texto):
     """
-    Detecta órdenes de exploración de carpetas/archivos.
+    Detecta Ã³rdenes de exploraciÃ³n de carpetas/archivos.
     Devuelve ('listar', carpeta) o ('leer', archivo, accion) o None.
     """
     t = texto.lower().strip()
@@ -335,32 +335,53 @@ def detectar_explorador(texto):
     if m:
         return ('buscar_archivo', m.group(1).strip().rstrip('.,;:'))
 
-    # Listar carpeta: "abre/busca/lista la carpeta X", "qué hay en la carpeta X"
-    m = re.search(r'(?:abre|busca|lista|listar|muestra|mu[eé]strame|ver|entra en|qu[eé] hay en|contenido de)\s+(?:la\s+)?(?:carpeta|directorio)\s+(?:llamada?\s+)?(.+)', t)
+    # Listar carpeta: "abre/busca/lista la carpeta X", "quÃ© hay en la carpeta X"
+    m = re.search(r'(?:abre|busca|lista|listar|muestra|mu[eÃ©]strame|ver|entra en|qu[eÃ©] hay en|contenido de)\s+(?:la\s+)?(?:carpeta|directorio)\s+(?:llamada?\s+)?(.+)', t)
     if m:
         carpeta = m.group(1).strip().rstrip('.,;:')
         # Limpiar "en el disco X", "del disco X"
         carpeta = re.sub(r'\s+(?:en|del|de)\s+(?:el\s+)?disco.*$', '', carpeta).strip()
         return ('listar', carpeta)
 
-    # Borrar archivo: "borra/elimina el archivo X (de la carpeta Y)"
-    # NO capturar si habla de eventos/citas/recordatorios (eso es del calendario)
-    _es_calendario = any(p in t for p in ['evento', 'cita', 'recordatorio', 'reunión', 'reunion'])
-    m = re.search(r'(?:borra|borrar|elimina|eliminar|qu[ií]ta|quitar)\s+(?:el\s+)?(?:archivo|fichero|documento)?\s*(.+)', t)
-    if m and not _es_calendario and any(p in t for p in ['borra', 'borrar', 'elimina', 'eliminar', 'quita', 'quitar']):
+    # Borrar archivo o carpeta
+    # Ejemplos:
+    # "borra el archivo notas.txt"
+    # "elimina la carpeta PRUEBA_BORRAR"
+    # "borra PRUEBA_BORRAR"
+    _es_calendario = any(p in t for p in [
+        'evento', 'cita', 'recordatorio', 'reunion', 'reunion'
+    ])
+
+    m = re.search(
+        r'(?:borra|borrar|elimina|eliminar|quita|quitar)\s+'
+        r'(?:(?:el|la)\s+)?'
+        r'(?:(?:archivo|fichero|documento|carpeta)\s+)?'
+        r'(.+)',
+        t
+    )
+
+    if m and not _es_calendario:
         resto = m.group(1).strip().rstrip('.,;:')
-        # ¿Menciona carpeta? "X de la carpeta Y"
+
         carpeta = None
-        mc = re.search(r'(.+?)\s+(?:de|en)\s+(?:la\s+)?carpeta\s+(.+)', resto)
+
+        mc = re.search(
+            r'(.+?)\s+(?:de|en)\s+(?:la\s+)?carpeta\s+(.+)',
+            resto
+        )
+
         if mc:
             archivo = mc.group(1).strip()
             carpeta = mc.group(2).strip().rstrip('.,;:')
         else:
             archivo = resto
-        return ('borrar', archivo, carpeta)
 
+        if 'carpeta' in t:
+            return ('borrar_carpeta', archivo, None)
+
+        return ('borrar', archivo, carpeta)
     # Leer/mostrar/resumir archivo: "lee/muestra/resume el archivo X"
-    m = re.search(r'(?:lee|leer|muestra|mu[eé]strame|resume|resumir|abre)\s+(?:el\s+)?(?:archivo|fichero|documento)\s+(.+)', t)
+    m = re.search(r'(?:lee|leer|muestra|mu[eÃ©]strame|resume|resumir|abre)\s+(?:el\s+)?(?:archivo|fichero|documento)\s+(.+)', t)
     if m:
         archivo = m.group(1).strip().rstrip('.,;:')
         if 'resume' in t or 'resumir' in t:

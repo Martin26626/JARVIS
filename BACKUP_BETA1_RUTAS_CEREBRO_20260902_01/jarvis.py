@@ -2642,31 +2642,6 @@ def _detectar_app_por_entidad(texto):
 
 
 
-    # JARVIS_ALPHA_CLASSIFIER_GUARD
-    try:
-        _texto_clasificador = str(texto).lower().strip()
-
-        _orden_abrir_app = bool(
-            re.search(
-                r"\b(abr[eí]|abrime|abreme|abrir|inicia|iniciame|ejecuta|ejecutame|lanz[aá])\b",
-                _texto_clasificador
-            )
-            and
-            (
-                re.search(
-                    r"\b(aplicacion|aplicación|app|programa|software|navegador)\b",
-                    _texto_clasificador
-                )
-                or 'opera gx' in _texto_clasificador
-                or 'steam' in _texto_clasificador
-                or 'roblox' in _texto_clasificador
-                or 'whatsapp' in _texto_clasificador
-            )
-        )
-
-    except Exception:
-        _orden_abrir_app = False
-
 def detectar_accion(texto):
 
     app_entidad = _detectar_app_por_entidad(texto)
@@ -4547,70 +4522,6 @@ def detectar_accion(texto):
         )
 
     return None
-# JARVIS_ALPHA_SIMPLE_ROUTER
-
-_detectar_accion_original_alpha = detectar_accion
-
-
-def detectar_accion(texto):
-    resultado = _detectar_accion_original_alpha(texto)
-
-    try:
-        t = str(texto).lower().strip()
-
-        abrir = any(x in t for x in (
-            "abre ",
-            "abrime ",
-            "abreme ",
-            "abrir ",
-            "abrí ",
-            "inicia ",
-            "iniciame ",
-            "ejecuta ",
-            "ejecutame ",
-            "lanza ",
-            "lanzá "
-        ))
-
-        app = any(x in t for x in (
-            "aplicacion",
-            "aplicación",
-            "app",
-            "programa",
-            "software",
-            "navegador",
-            "opera gx",
-            "steam",
-            "roblox",
-            "whatsapp"
-        ))
-
-        if abrir and app:
-
-            if isinstance(resultado, dict):
-
-                resultado["accion"] = "cerebro_plan"
-                resultado["ruta_alpha"] = True
-                return resultado
-
-            if isinstance(resultado, tuple):
-
-                if (
-                    len(resultado) > 0
-                    and str(resultado[0]).lower() == "sistema_procesos"
-                ):
-                    return (
-                        "cerebro_plan",
-                        str(texto)
-                    )
-
-            if isinstance(resultado, str):
-                return "cerebro_plan"
-
-    except Exception as exc:
-        print("[ROUTER]", repr(exc))
-
-    return resultado
 
 
 

@@ -1,64 +1,51 @@
-# ============================================
-#  JARVIS - Archivos que NUNCA se suben a GitHub
-# ============================================
-
-# --- CONFIGURACIÓN Y SECRETOS DEL USUARIO (¡MUY IMPORTANTE!) ---
-config.json              # datos del usuario: token de Telegram, chat ID, etc.
-token.json               # credenciales de Google (Gmail/Calendar)
-credentials.json         # credenciales de Google Cloud
-*.token
-.env
-
-# --- DATOS PERSONALES GENERADOS AL USAR JARVIS ---
-memoria.json             # lo que JARVIS recuerda del usuario
-notas.txt                # notas del usuario
-ultimo_resultado.txt
-temp_audio.wav
-
-# --- PERFIL DE WHATSAPP (contiene tu sesión iniciada) ---
-wa_profile/
-chrome-win64/
-chromedriver-win64/
-
-# --- MODELOS Y BINARIOS PESADOS (se descargan aparte) ---
-piper/                   # motor de voz Piper
-*.onnx                   # modelos de voz
-*.safetensors            # modelos de IA
-*.ckpt
-*.bin
-*.pt
-*.pth
-
-# --- ICONO E IMÁGENES GENERADAS ---
-jarvis.ico
-*.png
-*.jpg
-*.jpeg
-
-# --- PYTHON ---
+# Python
 __pycache__/
-*.py[cod]
-*$py.class
-venv/
-env/
+*.pyc
+*.pyo
+*.pyd
+
+# Entorno virtual
+Lib/
+Scripts/
+Include/
+pyvenv.cfg
 .venv/
-*.egg-info/
-dist/
-build/
+venv/
 
-# --- SISTEMA ---
-.DS_Store
-Thumbs.db
-desktop.ini
+# Modelos
+*.gguf
+*.onnx
+*.bin
+*.zip
 
-# --- EDITORES ---
-.vscode/
-.idea/
-*.swp
-*~
+# Piper
+piper/
 
-# --- LOGS Y TEMPORALES ---
+# llama.cpp
+llama_cpp_test/
+llama_cpp_test_backup/
+llama_cpp_test_oficial/
+
+# Backups y versiones antiguas
+
+BACKUP_*/
+backups_*/
+cirugia_*/
+*_backup.py
+*_backup_*.py
+*_BACKUP_*.py
+
+# Audios de prueba
+*.wav
+
+# Memorias locales
+memoria.json
+memoria_cerebro.json
+memoria_rapida.json
+
+# Audio de pruebas
+*.wav
+
+# Logs
 *.log
-temp/
-tmp/
 *.tmp

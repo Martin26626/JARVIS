@@ -2642,31 +2642,6 @@ def _detectar_app_por_entidad(texto):
 
 
 
-    # JARVIS_ALPHA_CLASSIFIER_GUARD
-    try:
-        _texto_clasificador = str(texto).lower().strip()
-
-        _orden_abrir_app = bool(
-            re.search(
-                r"\b(abr[eí]|abrime|abreme|abrir|inicia|iniciame|ejecuta|ejecutame|lanz[aá])\b",
-                _texto_clasificador
-            )
-            and
-            (
-                re.search(
-                    r"\b(aplicacion|aplicación|app|programa|software|navegador)\b",
-                    _texto_clasificador
-                )
-                or 'opera gx' in _texto_clasificador
-                or 'steam' in _texto_clasificador
-                or 'roblox' in _texto_clasificador
-                or 'whatsapp' in _texto_clasificador
-            )
-        )
-
-    except Exception:
-        _orden_abrir_app = False
-
 def detectar_accion(texto):
 
     app_entidad = _detectar_app_por_entidad(texto)
@@ -4538,79 +4513,37 @@ def detectar_accion(texto):
 
     if INTELIGENCIA_OK:
 
-        # Detectar una intención no debe invocar al agente: procesar()
-        # puede planificar y ejecutar herramientas. La única ejecución
-        # del agente ocurre más adelante, en ejecutar_accion().
-        return (
-            "cerebro_plan",
-            texto
-        )
+        try:
+
+            _resultado_aprendizaje = (
+                _inteligencia.procesar(
+                    texto,
+                    None
+                )
+            )
+
+            if _resultado_aprendizaje.get(
+                "exito"
+            ):
+
+                return (
+                    "cerebro_plan",
+                    texto
+                )
+
+            if _resultado_aprendizaje.get(
+                "requiere_confirmacion"
+            ):
+
+                return (
+                    "cerebro_plan",
+                    texto
+                )
+
+        except Exception:
+            pass
 
     return None
-# JARVIS_ALPHA_SIMPLE_ROUTER
-
-_detectar_accion_original_alpha = detectar_accion
-
-
-def detectar_accion(texto):
-    resultado = _detectar_accion_original_alpha(texto)
-
-    try:
-        t = str(texto).lower().strip()
-
-        abrir = any(x in t for x in (
-            "abre ",
-            "abrime ",
-            "abreme ",
-            "abrir ",
-            "abrí ",
-            "inicia ",
-            "iniciame ",
-            "ejecuta ",
-            "ejecutame ",
-            "lanza ",
-            "lanzá "
-        ))
-
-        app = any(x in t for x in (
-            "aplicacion",
-            "aplicación",
-            "app",
-            "programa",
-            "software",
-            "navegador",
-            "opera gx",
-            "steam",
-            "roblox",
-            "whatsapp"
-        ))
-
-        if abrir and app:
-
-            if isinstance(resultado, dict):
-
-                resultado["accion"] = "cerebro_plan"
-                resultado["ruta_alpha"] = True
-                return resultado
-
-            if isinstance(resultado, tuple):
-
-                if (
-                    len(resultado) > 0
-                    and str(resultado[0]).lower() == "sistema_procesos"
-                ):
-                    return (
-                        "cerebro_plan",
-                        str(texto)
-                    )
-
-            if isinstance(resultado, str):
-                return "cerebro_plan"
-
-    except Exception as exc:
-        print("[ROUTER]", repr(exc))
-
-    return resultado
 
 
 
@@ -7207,9 +7140,6 @@ class JarvisApp:
 
         self._wake_busy = False
 
-        # Fuente única de verdad para el HUD y el orbe.
-        self.estado_visual = "idle"
-
 
 
         # Para arrastrar la ventana
@@ -7236,7 +7166,7 @@ class JarvisApp:
 
         self._log("Cargando Whisper en GPU...", "system")
 
-        self._set_status("processing")
+        self._set_status("CARGANDO...", self.yellow)
 
         self.btn.config(state="disabled", text="  CARGANDO...  ")
 
@@ -7261,10 +7191,6 @@ class JarvisApp:
 
     def _crear_orbe(self):
         """Crea la segunda interfaz flotante de JARVIS."""
-
-        if self._orbe_existe():
-            return
-
         self.orbe = tk.Toplevel(self.root)
         self.orbe.title("JARVIS ORB")
         self.orbe.geometry("180x180")
@@ -7293,16 +7219,14 @@ class JarvisApp:
             45, 45, 135, 135,
             fill="#071a2b",
             outline=self.cyan,
-            width=3,
-            tags="orbe_externo"
+            width=3
         )
 
         # Ncleo brillante
         self.orbe_canvas.create_oval(
             68, 68, 112, 112,
             fill=self.cyan,
-            outline="",
-            tags="orbe_nucleo"
+            outline=""
         )
 
         # Texto
@@ -7310,8 +7234,7 @@ class JarvisApp:
             90, 145,
             text="JARVIS",
             fill=self.white,
-            font=("Segoe UI", 9, "bold"),
-            tags="orbe_texto"
+            font=("Segoe UI", 9, "bold")
         )
 
         # Movimiento del orbe
@@ -7333,48 +7256,7 @@ class JarvisApp:
 
         # Animacin
         self._orbe_pulso = 0
-        self._actualizar_orbe()
         self._animar_orbe()
-
-    def _orbe_existe(self):
-        return (
-            hasattr(self, "orbe")
-            and self.orbe.winfo_exists()
-        )
-
-    def _mostrar_hud(self):
-        if self._orbe_existe():
-            self.orbe.withdraw()
-
-        self.root.deiconify()
-        self.root.lift()
-        self.root.attributes("-topmost", True)
-
-    def _mostrar_orbe(self):
-        if not self._orbe_existe():
-            self._crear_orbe()
-
-        self.root.withdraw()
-        self.orbe.deiconify()
-        self.orbe.lift()
-        self.orbe.attributes("-topmost", True)
-
-    def _actualizar_orbe(self):
-        if not self._orbe_existe():
-            return
-
-        colores = {
-            "idle": self.green,
-            "listening": self.cyan,
-            "processing": self.yellow,
-            "speaking": self.magenta,
-        }
-
-        color = colores.get(self.estado_visual, self.green)
-        self.orbe_canvas.itemconfig("orbe_externo", outline=color)
-        self.orbe_canvas.itemconfig("orbe_nucleo", fill=color)
-        self.orbe_canvas.itemconfig("orbe_texto", fill=color)
-        self.orbe_canvas.itemconfig("pulso", outline=color)
 
     def _orbe_inicio_movimiento(self, event):
         self._orbe_drag_x = event.x
@@ -7387,7 +7269,10 @@ class JarvisApp:
 
     def _orbe_click(self, event):
         try:
-            self._mostrar_hud()
+            self.orbe.withdraw()
+            self.root.deiconify()
+            self.root.lift()
+            self.root.attributes("-topmost", True)
         except Exception:
             pass
 
@@ -7408,12 +7293,7 @@ class JarvisApp:
             45 - pulso,
             135 + pulso,
             135 + pulso,
-            outline={
-                "idle": self.green,
-                "listening": self.cyan,
-                "processing": self.yellow,
-                "speaking": self.magenta,
-            }.get(self.estado_visual, self.green),
+            outline=self.cyan,
             width=2,
             tags="pulso"
         )
@@ -7493,7 +7373,7 @@ class JarvisApp:
 
         try:
 
-            self._mostrar_orbe()
+            self.root.withdraw()
 
         except Exception:
 
@@ -7503,7 +7383,17 @@ class JarvisApp:
 
     def _mostrar_desde_bandeja(self, icon=None, item=None):
 
-        self.root.after(0, self._mostrar_hud)
+        self.root.after(0, self.root.deiconify)
+
+        self.root.after(0, self.root.lift)
+
+        self.root.after(
+
+            0,
+
+            lambda: self.root.attributes("-topmost", True)
+
+        )
 
 
 
@@ -7937,7 +7827,15 @@ class JarvisApp:
 
     def _minimizar(self):
 
-        self._ocultar_a_bandeja()
+        # Con overrideredirect, iconify no funciona directamente.
+
+        # Truco: quitar override, minimizar, y al restaurar volver a quitarlo.
+
+        self.root.overrideredirect(False)
+
+        self.root.iconify()
+
+        self.root.bind("<Map>", self._al_restaurar)
 
 
 
@@ -7985,31 +7883,59 @@ class JarvisApp:
 
 
 
-    def _set_status(self, estado, color=None):
+    def _set_status(self, text_or_state, color=None):
 
-        """Actualiza el único estado visual compartido por HUD y orbe."""
+        """Acepta tanto ('idle'/'listening'/...) como ('TEXTO', '#color')."""
 
-        cfg = {
-            "idle":       ("SISTEMA EN ESPERA", self.green, self.magenta, f"  ACTIVAR / INTERRUMPIR  [{TECLA_ACTIVAR.upper()}]  ", "normal"),
-            "listening":  (" ESCUCHANDO", self.cyan, self.cyan, f"  DETENER  [{TECLA_ACTIVAR.upper()}]  ", "normal"),
-            "processing": (" PROCESANDO", self.yellow, self.yellow, "  PROCESANDO...  ", "disabled"),
-            "speaking":   (" HABLANDO", self.magenta, self.magenta, f"  HABLANDO  {TECLA_ACTIVAR.upper()} INTERRUMPE  ", "normal"),
-        }
+        if text_or_state in ("idle", "listening", "processing", "speaking"):
 
-        if estado not in cfg:
-            estado = "idle"
+            cfg = {
 
-        self.estado_visual = estado
-        label, estado_color, boton_color, boton_texto, boton_estado = cfg[estado]
-        self.status_var.set(label)
-        self.status_lbl.config(fg=estado_color)
-        self.btn.config(
-            text=boton_texto,
-            fg=self.bg,
-            bg=boton_color,
-            state=boton_estado,
-        )
-        self._actualizar_orbe()
+                "idle":       ("SISTEMA EN ESPERA", self.green,   self.magenta, f"  ACTIVAR / INTERRUMPIR  [{TECLA_ACTIVAR.upper()}]  ", "normal"),
+
+                "listening":  (" ESCUCHANDO",  self.cyan,    self.cyan,    f"  DETENER  [{TECLA_ACTIVAR.upper()}]  ",              "normal"),
+
+                "processing": (" PROCESANDO",  self.yellow,  self.yellow,  "  PROCESANDO...  ",                                   "disabled"),
+
+                "speaking":   (" HABLANDO",    self.magenta, self.magenta, f"  HABLANDO  {TECLA_ACTIVAR.upper()} INTERRUMPE  ", "normal"),
+
+            }
+
+            label, sc, bc, bt, bs = cfg.get(text_or_state, cfg["idle"])
+
+            self.status_var.set(label)
+
+            self.status_lbl.config(fg=sc)
+
+            self.btn.config(text=bt, fg=self.bg, bg=bc, state=bs)
+
+        else:
+
+            # Modo texto + color manual
+
+            self.status_var.set(text_or_state)
+
+            if color:
+
+                self.status_lbl.config(fg=color)
+
+            if color == self.cyan:
+
+                self.btn.config(text=f"  DETENER  [{TECLA_ACTIVAR.upper()}]  ", fg=self.bg, bg=self.cyan, state="normal")
+
+            elif color == self.yellow:
+
+                self.btn.config(text="  PROCESANDO...  ", fg=self.bg, bg=self.yellow, state="disabled")
+
+            elif color == self.orange:
+
+                self.btn.config(fg=self.bg, bg=self.orange, state="normal")
+
+            else:
+
+                self.btn.config(text=f"  ACTIVAR / INTERRUMPIR  [{TECLA_ACTIVAR.upper()}]  ",
+
+                                fg=self.bg, bg=self.magenta, state="normal")
 
 
 
@@ -8309,7 +8235,9 @@ class JarvisApp:
 
             detener_habla()
 
-            self._set_status("idle")
+            self._set_status(" INTERRUMPIDO", self.orange)
+
+            self.root.after(1000, lambda: self._set_status("idle"))
 
             return
 
@@ -8348,9 +8276,6 @@ class JarvisApp:
         self.listening = False
 
         listening = False
-
-        if not self.processing:
-            self._set_status("idle")
 
 
 

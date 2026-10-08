@@ -12,7 +12,7 @@ _CONFIG = cargar_config()
 MODELO_TEXTO = _CONFIG.get("modelo_llm", "qwen3:8b")
 MODELO_CODIGO = _CONFIG.get("modelo_codigo", "qwen2.5-coder:7b")
 
-ESCRITORIO = os.path.expandvars(r"%USERPROFILE%\Desktop")
+ESCRITORIO = os.path.expandvars(r"%USERPROFILE%\OneDrive\Desktop")
 DESCARGAS  = os.path.expandvars(r"%USERPROFILE%\Downloads")
 DOCUMENTOS = os.path.expandvars(r"%USERPROFILE%\Documents")
 # Carpetas OneDrive por si el escritorio está sincronizado
@@ -174,6 +174,19 @@ def analizar_texto(texto, accion='resumir'):
     else:
         prompt = f"Analiza este texto en español:\n\n{texto}"
     return _preguntar(prompt, MODELO_TEXTO)
+
+def crear_carpeta(nombre, ubicacion=None):
+    """Crea una carpeta de forma segura."""
+    try:
+        if ubicacion is None:
+            ubicacion = ESCRITORIO
+
+        ruta = os.path.join(ubicacion, nombre)
+        os.makedirs(ruta, exist_ok=True)
+
+        return f"Carpeta creada correctamente: {ruta}"
+    except Exception as e:
+        return f"No pude crear la carpeta: {e}"
 
 
 def detectar_archivo(texto):
